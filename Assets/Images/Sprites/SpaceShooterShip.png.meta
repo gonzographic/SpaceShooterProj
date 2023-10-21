@@ -1,0 +1,2093 @@
+fileFormatVersion: 2
+guid: 226a469dae804aa42bd0cf1e44df598d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpaceShooterShip_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1072
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e264f3dee14daad40b57e790223de02b
+      internalID: -1304540902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1072
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a739f6d1c80bc43aa483c2a1c2df77
+      internalID: -862188513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1072
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7405d116a9a3dc04e937021e274d2ec6
+      internalID: -1206406523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1072
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8a678e575cd9d44ab7a65e8144d5cb
+      internalID: -1292365062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1072
+        width: 9
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b05278029ad19408317314c811b4ac
+      internalID: -916152632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1072
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1463b72e188c44541894bfb1ba605b96
+      internalID: 1724715154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1072
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd1d4dd05b746649b1a1aca411cb415
+      internalID: -2112968439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_7
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1057
+        width: 96
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3708ecfd763814e4eb4d056610476774
+      internalID: 1185071735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_8
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1064
+        width: 96
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d8571f59bee1544be1ecb37f737531
+      internalID: -693485841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_9
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1080
+        width: 101
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70635ed9929f524cb5de53ab97ff8bb
+      internalID: -202601064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_10
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1072
+        width: 104
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c317ca89477d74a8f6061e38c1dbdc
+      internalID: -795910084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_11
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1064
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4230b64720fd8a443907fdcd4758f51b
+      internalID: -1649051107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_12
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1078
+        width: 94
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca1d2c637110e94e88171cc3d77166d
+      internalID: -1958033352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_13
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1064
+        width: 94
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5f037e9b22d7b428b9104af9337c9f
+      internalID: 514912360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_14
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1057
+        width: 96
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60adc9eced1f4564c925d4a648f2a322
+      internalID: 1667177688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 858
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485611b8dc7699c40aefc927ca4c2014
+      internalID: 2067769965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 858
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c68a83366928e4283de22c1372b7aa
+      internalID: 942832471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 859
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566eb605d4704af46bae3018e68849ea
+      internalID: 471398060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_18
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 859
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6dcb71900f40254280e77476c97c26d
+      internalID: 427810637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_19
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 859
+        width: 13
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c46082da236adc43b0513a13419439b
+      internalID: 1372682795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_20
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 825
+        width: 96
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865f8d9ecd47e1f498b61de969189823
+      internalID: -636015169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_21
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 832
+        width: 96
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065474477f834fc44afe14ad2346bd90
+      internalID: 2049792625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_22
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 841
+        width: 95
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8479ef0fddd3643af6c7a8f5485714
+      internalID: -483065459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_23
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 828
+        width: 101
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4498abfb021d5b2479dbb3f5a1449a5d
+      internalID: -710599891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_24
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 626
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfee5520d6610c4d828e55e9d55e662
+      internalID: -1825085288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 626
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4b737b07ddace44bbbe13c84d0edb0
+      internalID: -742440916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_26
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 627
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738450f6a743bce4e894e85fdd717353
+      internalID: 430043274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_27
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 627
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1960653cd56dd5a42b4e1e4b39e3b37b
+      internalID: 1173127449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_28
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 624
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475a0bdbb607cd44e8789f9b86103697
+      internalID: -497290239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_29
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 616
+        width: 95
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55bb04008737014dbdbaf22a9f19e55
+      internalID: -880952628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_30
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 617
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000cc0fddebca974493eb4490dc95b76
+      internalID: 1811691817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_31
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 632
+        width: 95
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664c3033782d003439dd1b5258d4dba0
+      internalID: 267019083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_32
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 616
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3e604b9dc92a64885db51f65b50dd3
+      internalID: 1468771665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_33
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 392
+        width: 103
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e51fd3a05a209f459c3327df2f8d10a
+      internalID: 1583824491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_34
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 393
+        width: 96
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbb84d0d323df74485625375bc96cca
+      internalID: -250618610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_35
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 393
+        width: 115
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4439680c2d3884da3b7dd6f36c00ce
+      internalID: 144807660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 473
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fdb23a6d546d14182655d9325b1c9b
+      internalID: 1797542515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_37
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 472
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17f86712f5cdb743a844f54c62e2ac3
+      internalID: 68967287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_38
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 464
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ec006bf2c1ab641a95805667fa7704
+      internalID: 983355535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_39
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 473
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dee15ba120a7c947b05ee1eab58cebc
+      internalID: -653863888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_40
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 468
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ada42951e8ad264f8488f98eb0b485b
+      internalID: 1499578749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_41
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 392
+        width: 103
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74455163845513f4290c2f49a53b7b82
+      internalID: 417286971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_42
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 393
+        width: 103
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df594bf8991c8a42b73242353df4d13
+      internalID: -250532824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_43
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 464
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f9f795f9aa94141b051101afbed549
+      internalID: 801707228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_44
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 461
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9d5f98d9c043c48b74620a889a04c9
+      internalID: 2133902703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_45
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 416
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a421ceb105eaf4c8068bccdc7467b3
+      internalID: -1278655505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 416
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130f2df4cb8f47348beff28b9a3e0c00
+      internalID: 1024509400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_47
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 416
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2838bb0295bf8c04da5fa6f5e611e9dd
+      internalID: -1705283540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2305b7b9a60b89e47910d463ba153f69
+      internalID: 6680992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_49
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 416
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7472d7ec91ec7f498385bdc0f96498b
+      internalID: -1697665905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_50
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 416
+        width: 22
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827ce88101164e74eb5017061065ec9d
+      internalID: 700101071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_51
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 393
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c03eb79ff2190443af787d8641e598f
+      internalID: 833293678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_52
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 393
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a847f41e70180054eb7bb4de7b95a7a2
+      internalID: 1823447108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_53
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 448
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6944888b87491439e7c2ddefd1462f
+      internalID: 579665374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_54
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 449
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e5a6d794889914d812c981bb7d06ea
+      internalID: -1475703258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_55
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 450
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7889c9a740c21964da5038ae45add54c
+      internalID: 749935794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_56
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 393
+        width: 102
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6e2952c029f1e4aa67bc54eaeb2f4f
+      internalID: 412893052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_57
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 152
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338a9598fb753c047990168a262e7d77
+      internalID: 1005927281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_58
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 266
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55358c2c37e4dce4ba804857de9df40b
+      internalID: -882535888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_59
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 260
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c803157c6e7fd2a40b2a7ea888e62948
+      internalID: -748684142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_60
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 268
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a8cdcfc9a51a1418ea62a7e05fab99
+      internalID: 89494622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_61
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 264
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd83a9fca30b76d44bc85923011a8dea
+      internalID: 783859175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_62
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 152
+        width: 119
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f860f932345444b9a55f8e4e1f7fdc
+      internalID: -1364893389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_63
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 256
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc2499d143006241913da14437a589f
+      internalID: -1601215455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_64
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 248
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba36092bfd47d34f97a5f714765257f
+      internalID: -1044517426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_65
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 203
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b12af52fc2da3418ce614da69c4f6e
+      internalID: 2025995296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_66
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 202
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efcc80824e0dc148b9aaea791d3e4a3
+      internalID: -1343756947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_67
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 202
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3dea595a1f15b140a95e0d1c8de2617
+      internalID: 1263487280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_68
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 201
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99414bc0006e3043bb1e995c5569d5f
+      internalID: -744988862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_69
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 202
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e33bc25def1f942b64886cd583a588
+      internalID: 1560490093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_70
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 252
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e63deefc0c79884ebf825e1ff1d26c3
+      internalID: 1754379185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_71
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 248
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cf1c8c22c4b7646ab23a414a92ae8c
+      internalID: -2056388172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_72
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 202
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af360fc21d8659f44843884e14dc7398
+      internalID: -1328074010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_73
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 201
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25595114e2205f04b915da61de84e2dd
+      internalID: -351505266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_74
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 240
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f9e523260e5ce4293b76798bae657f
+      internalID: -1613470817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_75
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 236
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359a75130f0e4324891a634dba391b4c
+      internalID: 1081451148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_76
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 176
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce51c214ab53694ea7e3defd710f879
+      internalID: 1940881889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_77
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 166
+        width: 96
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbafa1bc5ea9f144b4eb02aabd00a96
+      internalID: -1653928467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_78
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 160
+        width: 99
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a3d0bfdc9167f4c9c1a3c8fa5b9a1e
+      internalID: 1889252572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_79
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 152
+        width: 115
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db37a67eac0afd41b696ccf42c0e973
+      internalID: -2044082519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_80
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 221
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7bdff4c9695164aa2f2f86521d4172
+      internalID: -240221194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_81
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 174
+        width: 111
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067845b370f8fa34a81bbfaa9c7368a3
+      internalID: -724489548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_82
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 176
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef11e8c3a632300418f5c8789e4fc0df
+      internalID: -124501872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_83
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 160
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d656826651653674a9afc881264c7ac9
+      internalID: 1476149788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_84
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 168
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2cc371c8370fa4b92f965ccd575538
+      internalID: -738745474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_85
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 161
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c3a1ef8273e7941b32d863c827c92e
+      internalID: 816121594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterShip_86
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 152
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04810f74daba3e45a3f66d662d892a6
+      internalID: -38457073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpaceShooterShip_0: -1304540902
+      SpaceShooterShip_1: -862188513
+      SpaceShooterShip_10: -795910084
+      SpaceShooterShip_11: -1649051107
+      SpaceShooterShip_12: -1958033352
+      SpaceShooterShip_13: 514912360
+      SpaceShooterShip_14: 1667177688
+      SpaceShooterShip_15: 2067769965
+      SpaceShooterShip_16: 942832471
+      SpaceShooterShip_17: 471398060
+      SpaceShooterShip_18: 427810637
+      SpaceShooterShip_19: 1372682795
+      SpaceShooterShip_2: -1206406523
+      SpaceShooterShip_20: -636015169
+      SpaceShooterShip_21: 2049792625
+      SpaceShooterShip_22: -483065459
+      SpaceShooterShip_23: -710599891
+      SpaceShooterShip_24: -1825085288
+      SpaceShooterShip_25: -742440916
+      SpaceShooterShip_26: 430043274
+      SpaceShooterShip_27: 1173127449
+      SpaceShooterShip_28: -497290239
+      SpaceShooterShip_29: -880952628
+      SpaceShooterShip_3: -1292365062
+      SpaceShooterShip_30: 1811691817
+      SpaceShooterShip_31: 267019083
+      SpaceShooterShip_32: 1468771665
+      SpaceShooterShip_33: 1583824491
+      SpaceShooterShip_34: -250618610
+      SpaceShooterShip_35: 144807660
+      SpaceShooterShip_36: 1797542515
+      SpaceShooterShip_37: 68967287
+      SpaceShooterShip_38: 983355535
+      SpaceShooterShip_39: -653863888
+      SpaceShooterShip_4: -916152632
+      SpaceShooterShip_40: 1499578749
+      SpaceShooterShip_41: 417286971
+      SpaceShooterShip_42: -250532824
+      SpaceShooterShip_43: 801707228
+      SpaceShooterShip_44: 2133902703
+      SpaceShooterShip_45: -1278655505
+      SpaceShooterShip_46: 1024509400
+      SpaceShooterShip_47: -1705283540
+      SpaceShooterShip_48: 6680992
+      SpaceShooterShip_49: -1697665905
+      SpaceShooterShip_5: 1724715154
+      SpaceShooterShip_50: 700101071
+      SpaceShooterShip_51: 833293678
+      SpaceShooterShip_52: 1823447108
+      SpaceShooterShip_53: 579665374
+      SpaceShooterShip_54: -1475703258
+      SpaceShooterShip_55: 749935794
+      SpaceShooterShip_56: 412893052
+      SpaceShooterShip_57: 1005927281
+      SpaceShooterShip_58: -882535888
+      SpaceShooterShip_59: -748684142
+      SpaceShooterShip_6: -2112968439
+      SpaceShooterShip_60: 89494622
+      SpaceShooterShip_61: 783859175
+      SpaceShooterShip_62: -1364893389
+      SpaceShooterShip_63: -1601215455
+      SpaceShooterShip_64: -1044517426
+      SpaceShooterShip_65: 2025995296
+      SpaceShooterShip_66: -1343756947
+      SpaceShooterShip_67: 1263487280
+      SpaceShooterShip_68: -744988862
+      SpaceShooterShip_69: 1560490093
+      SpaceShooterShip_7: 1185071735
+      SpaceShooterShip_70: 1754379185
+      SpaceShooterShip_71: -2056388172
+      SpaceShooterShip_72: -1328074010
+      SpaceShooterShip_73: -351505266
+      SpaceShooterShip_74: -1613470817
+      SpaceShooterShip_75: 1081451148
+      SpaceShooterShip_76: 1940881889
+      SpaceShooterShip_77: -1653928467
+      SpaceShooterShip_78: 1889252572
+      SpaceShooterShip_79: -2044082519
+      SpaceShooterShip_8: -693485841
+      SpaceShooterShip_80: -240221194
+      SpaceShooterShip_81: -724489548
+      SpaceShooterShip_82: -124501872
+      SpaceShooterShip_83: 1476149788
+      SpaceShooterShip_84: -738745474
+      SpaceShooterShip_85: 816121594
+      SpaceShooterShip_86: -38457073
+      SpaceShooterShip_9: -202601064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
