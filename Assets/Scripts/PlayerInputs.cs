@@ -4,32 +4,50 @@ using UnityEngine;
 
 public class PlayerInputs : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D myRigidbody;
     private Vector3 myTransform;
-
-    // Start is called before the first frame update
+    private float shipXPos;
+    private float shipYPos;
+    private float newXPos;
+    private float newYPos;
     void Start()
     {
         myTransform = transform.position;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
+        shipXPos = Input.mousePosition.x;
+        shipYPos = Input.mousePosition.y;
+        Debug.Log(shipXPos);
 
-        }
-        if (Input.GetKey(KeyCode.W))
+        if (shipXPos <= (Screen.width - Screen.width) + 50)
         {
-
+            newXPos = 50;
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (shipXPos >= (Screen.width - 50))
         {
-
+            newXPos = Screen.width - 50;
         }
+        else
+        {
+            newXPos = Input.mousePosition.x;
+        }
+        if (shipYPos <= (Screen.height - Screen.height) + 100)
+        {
+            newYPos = 100;
+        }
+        else if (shipYPos >= (Screen.height - 400))
+        {
+            newYPos = Screen.height - 400;
+        }
+        else
+        {
+            newYPos = Input.mousePosition.y;
+        }
+
+        myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));
     }
 }
