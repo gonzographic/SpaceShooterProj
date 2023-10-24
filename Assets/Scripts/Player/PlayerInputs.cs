@@ -19,9 +19,11 @@ public class PlayerInputs : MonoBehaviour
     private float shipYPos;
     private float newXPos;
     private float newYPos;
+    private float shootTimer;
 
     void Start()
     {
+        shootTimer = 0.5f;
         myTransform = transform.position;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -29,6 +31,8 @@ public class PlayerInputs : MonoBehaviour
 
     void Update()
     {
+        shootTimer += Time.deltaTime;
+        
         shipXPos = Input.mousePosition.x;
         shipYPos = Input.mousePosition.y;
 
@@ -38,7 +42,7 @@ public class PlayerInputs : MonoBehaviour
 
         ChangeWeapons();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && shootTimer >= 0.5f)
         {
             var newLaser = laser.GetLaserProjectile();
             if (newLaser != null)
@@ -50,6 +54,7 @@ public class PlayerInputs : MonoBehaviour
             {
                 newLaser.SetActive(true);
             }
+            shootTimer = 0;
         }
         else if (Input.GetMouseButtonDown(1))
         {

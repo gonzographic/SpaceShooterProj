@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class LaserOne : MonoBehaviour
 {
-    void Update()
+    [SerializeField] private AudioSource laserAudio;
+    [SerializeField] private AudioClip laserSound;
+
+    private void OnEnable()
+    {
+        laserAudio.PlayOneShot(laserSound);
+    }
+    private void Update()
     {
         transform.position += new Vector3(0, (10 * Time.deltaTime), 0);
     }
