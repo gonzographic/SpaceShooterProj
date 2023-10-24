@@ -11,6 +11,8 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private GameObject bulletSpawnMiddle;
     [SerializeField] private GameObject bulletSpawnLeft;
     [SerializeField] private GameObject bulletSpawnRight;
+    [SerializeField] private List<GameObject> spawnPoints;
+    [SerializeField] private LaserPool laser;
 
     private Vector3 myTransform;
     private float shipXPos;
@@ -38,13 +40,35 @@ public class PlayerInputs : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(laserAmmo, bulletSpawnMiddle.transform);
+            var newLaser = laser.GetLaserProjectile();
+            if (newLaser != null)
+            {
+                newLaser.transform.position = bulletSpawnMiddle.transform.position;
+            }
+
+            for (int i = 0; i < laser.GetLaserProjectiles.Count; i++)
+            {
+                newLaser.SetActive(true);
+            }
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            Instantiate(laserAmmo, bulletSpawnMiddle.transform);
-            Instantiate(laserAmmo, bulletSpawnLeft.transform);
-            Instantiate(laserAmmo, bulletSpawnRight.transform);
+            GameObject[] newLaser = new GameObject[3];
+
+            for (int i = 0; i < spawnPoints.Count; i++)
+            {
+                newLaser[i] = laser.GetLaserProjectile();
+
+                if (newLaser[i] != null)
+                {
+                    newLaser[i].transform.position = spawnPoints[i].transform.position;
+                }
+
+                for (int j = 0; j < laser.GetLaserProjectiles.Count; j++)
+                {
+                    newLaser[i].SetActive(true);
+                }
+            }
         }
 
         myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));
