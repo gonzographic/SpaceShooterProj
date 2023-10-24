@@ -8,6 +8,6 @@ public class BackgroundScroll : MonoBehaviour
 
     void Update()
     {
-        background.uvRect = new Rect(background.uvRect.size, background.uvRect.position + new Vector2(verticalSpeed,0) * Time.deltaTime);
+        background.uvRect = new Rect(background.uvRect.position + new Vector2(verticalSpeed,0) * Time.deltaTime, background.uvRect.size);
     }
 }
