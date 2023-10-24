@@ -8,7 +8,8 @@ public class TurretShooting : MonoBehaviour
 
     private void OnEnable()
     {
-        player = GameObject.Find("PlayerShip");
+        //player = GameObject.Find("PlayerShip");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {

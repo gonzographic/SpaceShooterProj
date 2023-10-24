@@ -8,4 +8,9 @@ public class LightMovingScript : MonoBehaviour
     {
         transform.position -= new Vector3(0, (4.2f * Time.deltaTime), 0);
     }
+
+    private void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
+    }
 }
