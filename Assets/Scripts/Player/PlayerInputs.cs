@@ -12,6 +12,8 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private GameObject bulletSpawnLeft;
     [SerializeField] private GameObject bulletSpawnRight;
     [SerializeField] private List<GameObject> spawnPoints;
+    [SerializeField] private AudioSource soundEffects;
+    [SerializeField] private ProjectileSO laserSound;
     [SerializeField] private LaserPool laser;
 
     private Vector3 myTransform;
@@ -54,6 +56,7 @@ public class PlayerInputs : MonoBehaviour
             {
                 newLaser.SetActive(true);
             }
+            soundEffects.PlayOneShot(laserSound.GetFireSound);
             shootTimer = 0;
         }
         else if (Input.GetMouseButtonDown(1))
@@ -74,6 +77,7 @@ public class PlayerInputs : MonoBehaviour
                     newLaser[i].SetActive(true);
                 }
             }
+            soundEffects.PlayOneShot(laserSound.GetFireSound);
         }
 
         myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));

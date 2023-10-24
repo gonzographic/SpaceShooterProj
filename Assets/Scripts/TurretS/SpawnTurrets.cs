@@ -57,6 +57,5 @@ public class SpawnTurrets : MonoBehaviour
             }
             spawnTimer = spawnInterval;
         }
-        Debug.Log(""+spawnCount);
     }
 }

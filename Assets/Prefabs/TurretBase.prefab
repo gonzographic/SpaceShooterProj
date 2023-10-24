@@ -128,8 +128,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0092999935, y: -0.116749994, z: 0}
-    m_Extent: {x: 0.24599999, y: 0.36075, z: 0}
+    m_Center: {x: -0.016449995, y: -0.11614999, z: 0}
+    m_Extent: {x: 0.24375, y: 0.37065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.008299999, y: -0.12105, z: 0}
-    m_Extent: {x: 0.2392, y: 0.36455, z: 0}
+    m_Center: {x: -0.012199998, y: -0.11835001, z: 0}
+    m_Extent: {x: 0.2446, y: 0.36825, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -292,8 +292,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.012049995, y: -0.116950005, z: 0}
-    m_Extent: {x: 0.24704999, y: 0.36565, z: 0}
+    m_Center: {x: -0.01235, y: -0.111250006, z: 0}
+    m_Extent: {x: 0.24445, y: 0.36045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 2471696887576521048}
   - component: {fileID: 4204691638006162369}
   - component: {fileID: 4230791164613935361}
+  - component: {fileID: 8069878946033620443}
   m_Layer: 0
   m_Name: TurretTop
   m_TagString: Untagged
@@ -414,7 +415,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217277c04474c7349b295ccf37d5f7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  turretData: {fileID: 11400000, guid: 3fc6279fd9e859647b557c2a82ff7907, type: 2}
+--- !u!61 &8069878946033620443
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952750223356120082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.65, y: 0.89}
+    newSize: {x: 0.65, y: 0.89}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.65, y: 0.89}
+  m_EdgeRadius: 0
 --- !u!1 &3117627547002880178
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,8 +558,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.003399998, y: 0.0030499995, z: 0}
-    m_Extent: {x: 0.184, y: 0.17355, z: 0}
+    m_Center: {x: 0.0011000037, y: 0.0022999942, z: 0}
+    m_Extent: {x: 0.1789, y: 0.1751, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -723,8 +769,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0067000017, y: -0.11805001, z: 0}
-    m_Extent: {x: 0.23969999, y: 0.36065, z: 0}
+    m_Center: {x: -0.0031000003, y: -0.1126, z: 0}
+    m_Extent: {x: 0.24270001, y: 0.3673, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
