@@ -10,11 +10,11 @@ public class Explosion : MonoBehaviour
 
     private float waitTime;
 
-
     private void OnEnable()
     {
         playSFX.PlayOneShot(explosionSound);
     }
+
     private void Update()
     {
         waitTime += Time.deltaTime;

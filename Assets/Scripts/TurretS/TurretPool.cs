@@ -33,6 +33,10 @@ public class TurretPool : MonoBehaviour
             }
         }
 
-        return null;
+        var newTurret = Instantiate(turret, transform);
+        turret.gameObject.SetActive(false);
+        turrets.Add(newTurret);
+
+        return newTurret;
     }
 }

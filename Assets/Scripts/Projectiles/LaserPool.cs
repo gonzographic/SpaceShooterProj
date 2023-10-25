@@ -33,6 +33,10 @@ public class LaserPool : MonoBehaviour
             }
         }
 
-        return null;
+        var newLaser = Instantiate(laserProjectile, transform);
+        laserProjectile.gameObject.SetActive(false);
+        laserProjectiles.Add(newLaser);
+
+        return newLaser;
     }
 }
