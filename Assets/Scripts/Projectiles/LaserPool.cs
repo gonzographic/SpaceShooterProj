@@ -14,7 +14,7 @@ public class LaserPool : MonoBehaviour
     {
         laserProjectiles = new List<GameObject>();
 
-        amountOfLaserProjectiles = 30;
+        amountOfLaserProjectiles = 50;
 
         for (int i = 0; i < amountOfLaserProjectiles; i++)
         {

@@ -14,7 +14,7 @@ public class TurretPool : MonoBehaviour
     {
         turrets = new List<GameObject>();
 
-        amountOfTurrets = 4;
+        amountOfTurrets = 8;
 
         for (int i = 0; i < amountOfTurrets; i++)
         {

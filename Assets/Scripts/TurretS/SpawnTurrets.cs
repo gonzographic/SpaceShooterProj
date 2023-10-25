@@ -24,7 +24,7 @@ public class SpawnTurrets : MonoBehaviour
 
         if (spawnTimer <= 0 && spawnCount > 50)
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < turretSpawns.Count; i++)
             {
                 var newTurret = turret.GetTurret();
 
@@ -47,7 +47,7 @@ public class SpawnTurrets : MonoBehaviour
 
             if (newTurret != null)
             {
-                var randSpawn = Random.Range(0, 2);
+                var randSpawn = Random.Range(0, turretSpawns.Count);
                 newTurret.transform.position = turretSpawns[randSpawn].transform.position;
             }
 
