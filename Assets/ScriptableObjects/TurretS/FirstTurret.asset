@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fe301fbd862ba4e9aa9529b234c562, type: 3}
   m_Name: FirstTurret
   m_EditorClassIdentifier: 
-  unitFireSpeed: 3
-  fireSound: {fileID: 8300000, guid: bcd3eddc5fdb8b847a8917c39b78c8c6, type: 3}
+  rateOfFire: 0
+  health: 3
+  projectileUsed: {fileID: 2267739600030115732, guid: d43e1e62356ac064bb7fba2b4fa3d35a, type: 3}
+  moveSpeed: 4.2

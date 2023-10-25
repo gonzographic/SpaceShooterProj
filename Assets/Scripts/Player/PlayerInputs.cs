@@ -59,7 +59,7 @@ public class PlayerInputs : MonoBehaviour
             soundEffects.PlayOneShot(laserSound.GetFireSound);
             shootTimer = 0;
         }
-        else if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             GameObject[] newLaser = new GameObject[3];
 

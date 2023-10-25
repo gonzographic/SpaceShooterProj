@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.013800025, y: 0.0031499863, z: 0}
-    m_Extent: {x: 3.396, y: 2.53825, z: 0}
+    m_Center: {x: 0.00024998188, y: -0.005550027, z: 0}
+    m_Extent: {x: 3.3952498, y: 2.5395498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 2083947586034586462}
   - component: {fileID: 4364296428143894316}
   - component: {fileID: -5872096704698785725}
-  - component: {fileID: 8844772523119367820}
   m_Layer: 7
   m_Name: Laser
   m_TagString: Untagged
@@ -285,52 +284,7 @@ MonoBehaviour:
   - {x: 5.5794296, y: -0.6644922, z: 0}
   m_ShapePathHash: 618518118
   m_Mesh: {fileID: 0}
-  m_InstanceId: 76454
+  m_InstanceId: 48650
   m_LocalBounds:
     m_Center: {x: 0.024656773, y: -0.0080240965, z: 0}
     m_Extent: {x: 5.5547724, y: 1.0697045, z: 0}
---- !u!61 &8844772523119367820
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267739600030115732}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0

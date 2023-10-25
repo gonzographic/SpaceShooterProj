@@ -3,11 +3,16 @@ using UnityEngine.UI;
 
 public class BackgroundScroll : MonoBehaviour
 {
-    [SerializeField] private RawImage background;
-    [SerializeField] private float verticalSpeed;
+    [SerializeField] private BackgroundScrollSO scrollData;
+    [SerializeField] private RawImage backgroundImage;
 
-    void Update()
+    private void Start()
     {
-        background.uvRect = new Rect(background.uvRect.position + new Vector2(verticalSpeed,0) * Time.deltaTime, background.uvRect.size);
+        backgroundImage.texture = scrollData.GetBackgroundImage;
+        backgroundImage.color = scrollData.GetImageTint;
+    }
+    private void Update()
+    {
+        backgroundImage.uvRect = new Rect(backgroundImage.uvRect.position + new Vector2(scrollData.GetScrollSpeed, 0) * Time.deltaTime, backgroundImage.uvRect.size);
     }
 }
