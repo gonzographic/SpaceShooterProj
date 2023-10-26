@@ -6,39 +6,42 @@ using UnityEngine;
 public class TurretShooting : MonoBehaviour
 {
     [SerializeField] private TurretSO turretData;
-    [SerializeField] private GameObject turretBase;
-    [SerializeField] private GameObject explosion;
-    
+    [SerializeField] private GameObject laserSpawnOne;
+
     private GameObject player;
-    private float currentHealth;
+    private float shootTimer;
 
     private void OnEnable()
     {
+        shootTimer = 0.75f;
         player = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    private void Start()
-    {
-        currentHealth = turretData.GetHealth;
     }
 
     private void Update()
     {
-        turretBase.transform.position -= new Vector3(0, (turretData.GetMoveSpeed * Time.deltaTime), 0);
-
+        shootTimer -= Time.deltaTime;
         TargetPlayer();
-
-        if (currentHealth <= 0)
-        {
-            Instantiate(explosion, transform.position, transform.rotation);
-            TurretDie();
-        }
+        ShootPlayer();
     }
 
-    private void TurretDie()
+    private void ShootPlayer()
     {
-        turretBase.SetActive(false);
-        currentHealth = turretData.GetHealth;
+        if (shootTimer <= 0)
+        {
+            var newLaser = EnemyLaserPool.Instance.GetLaserProjectile();
+            if (newLaser != null)
+            {
+                newLaser.transform.position = laserSpawnOne.transform.position;
+                newLaser.transform.rotation = laserSpawnOne.transform.rotation;
+            }
+
+            for (int i = 0; i < EnemyLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            {
+                newLaser.SetActive(true);
+            }
+            //soundEffects.PlayOneShot(laserSound.GetFireSound);
+            shootTimer = 0.75f;
+        }
     }
 
     private void TargetPlayer()
@@ -50,16 +53,9 @@ public class TurretShooting : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == 6)
         {
-            currentHealth -= 1;
-            collision.gameObject.SetActive(false);
+            ShootPlayer();
         }
-    }
-
-    private void OnBecameInvisible()
-    {
-        turretBase.SetActive(false);
-        currentHealth = turretData.GetHealth;
     }
 }

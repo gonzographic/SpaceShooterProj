@@ -13,12 +13,4 @@ public class LaserOne : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer != 6)
-        {
-            gameObject.SetActive(false);
-        }
-    }
 }

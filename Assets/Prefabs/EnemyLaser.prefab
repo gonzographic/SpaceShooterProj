@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326341165313192552}
   - component: {fileID: 6110448084425027878}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.518
-  m_Color: {r: 0, g: 1, b: 0.060156345, a: 1}
+  m_Color: {r: 1, g: 0.06914881, b: 0, a: 1}
   m_Intensity: 14.11
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006700039, y: -0.0020999908, z: 0}
-    m_Extent: {x: 3.3934, y: 2.5412, z: 0}
+    m_Center: {x: -0.011649966, y: -0.0019500256, z: 0}
+    m_Extent: {x: 3.39755, y: 2.54025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -94,12 +94,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5045036956179512551}
   - component: {fileID: 1866676251519946118}
-  - component: {fileID: 6025276005947621868}
   - component: {fileID: 2083947586034586462}
   - component: {fileID: 4364296428143894316}
   - component: {fileID: -5872096704698785725}
-  m_Layer: 7
-  m_Name: Laser
+  - component: {fileID: -2303104362792612714}
+  m_Layer: 8
+  m_Name: EnemyLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13751912, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.077388376, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -173,19 +173,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6025276005947621868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267739600030115732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bebda2d51efdf148927a21e52d72e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileData: {fileID: 11400000, guid: a4f7046b2b803574896afb24c99756c9, type: 2}
 --- !u!61 &2083947586034586462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -284,7 +271,21 @@ MonoBehaviour:
   - {x: 5.5794296, y: -0.6644922, z: 0}
   m_ShapePathHash: 618518118
   m_Mesh: {fileID: 0}
-  m_InstanceId: 72902
+  m_InstanceId: 31204
   m_LocalBounds:
     m_Center: {x: 0.024656773, y: -0.0080240965, z: 0}
     m_Extent: {x: 5.5547724, y: 1.0697045, z: 0}
+--- !u!114 &-2303104362792612714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267739600030115732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe218e771a7b8f4083aa1ddb4307b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileData: {fileID: 11400000, guid: 02fb7b0bb71c2cb41bfb17a3c0b4ee42, type: 2}
+  myRigidbody: {fileID: 4364296428143894316}
