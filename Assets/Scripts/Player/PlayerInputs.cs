@@ -14,6 +14,8 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private GameObject bulletSpawnRight;
     [SerializeField] private List<GameObject> spawnPoints;
     [SerializeField] private AudioSource soundEffects;
+    [SerializeField] private AudioSource soundLasers;
+    [SerializeField] private AudioSource soundPower;
     [SerializeField] private AudioClip wallImpactSound;
     [SerializeField] private AudioClip powerOff;
     [SerializeField] private AudioClip warningBeep;
@@ -83,7 +85,7 @@ public class PlayerInputs : MonoBehaviour
             {
                 newLaser.SetActive(true);
             }
-            soundEffects.PlayOneShot(laserSound.GetFireSound);
+            soundLasers.PlayOneShot(laserSound.GetFireSound);
             shootTimer = 0;
         }
         if (Input.GetMouseButtonDown(1) && powerTimer <= 0)
@@ -104,7 +106,7 @@ public class PlayerInputs : MonoBehaviour
                     newLaser[i].SetActive(true);
                 }
             }
-            soundEffects.PlayOneShot(laserSound.GetFireSound);
+            soundLasers.PlayOneShot(laserSound.GetFireSound);
             powerTimer = 5;
         }
 
@@ -112,11 +114,11 @@ public class PlayerInputs : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            if(!soundEffects.isPlaying)
+            if (!soundPower.isPlaying)
             {
-                soundEffects.PlayOneShot(powerOff);
+                soundPower.PlayOneShot(powerOff);
             }
-
+      
             currentHealth = 5;
             Debug.Log("Game Over");
         }
@@ -184,6 +186,7 @@ public class PlayerInputs : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
+            currentHealth -= 1;
             collision.gameObject.SetActive(false);
         }
     }
@@ -214,22 +217,18 @@ public class PlayerInputs : MonoBehaviour
         {
             currentHealth -= 1;
 
-            if (!soundEffects.isPlaying)
-            {
                 soundEffects.PlayOneShot(warningBeep);
                 soundEffects.PlayOneShot(wallImpactSound);
-            }
+
         }
 
         if (collision.gameObject.tag == "RightWall")
         {
             currentHealth -= 1;
 
-            if (!soundEffects.isPlaying)
-            {
                 soundEffects.PlayOneShot(warningBeep);
                 soundEffects.PlayOneShot(wallImpactSound);
-            }
+
         }
     }
 }

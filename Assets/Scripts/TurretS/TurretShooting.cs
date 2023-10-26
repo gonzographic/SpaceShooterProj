@@ -13,7 +13,7 @@ public class TurretShooting : MonoBehaviour
 
     private void OnEnable()
     {
-        shootTimer = 0.75f;
+        shootTimer = 1.5f;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -40,7 +40,7 @@ public class TurretShooting : MonoBehaviour
                 newLaser.SetActive(true);
             }
             //soundEffects.PlayOneShot(laserSound.GetFireSound);
-            shootTimer = 0.75f;
+            shootTimer = 1.5f;
         }
     }
 
