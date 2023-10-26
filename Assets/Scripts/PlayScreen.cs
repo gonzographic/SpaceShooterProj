@@ -4,10 +4,12 @@ public class PlayScreen : MonoBehaviour
 {
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private AudioClip startVoice;
+    [SerializeField] private AudioClip powerUp;
 
     void Start()
     {
-        Invoke("PlaySound", 1.2f);
+        soundSource.PlayOneShot(powerUp);
+        Invoke("PlaySound", 2.1f);
     }
 
     private void PlaySound()

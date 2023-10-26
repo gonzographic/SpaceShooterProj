@@ -13,19 +13,26 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private GameObject bulletSpawnRight;
     [SerializeField] private List<GameObject> spawnPoints;
     [SerializeField] private AudioSource soundEffects;
+    [SerializeField] private AudioClip wallImpactSound;
+    [SerializeField] private AudioClip powerOff;
+    [SerializeField] private AudioClip warningBeep;
     [SerializeField] private ProjectileSO laserSound;
     [SerializeField] private LaserPool laser;
 
+    private float currentHealth;
     private Vector3 myTransform;
     private float shipXPos;
     private float shipYPos;
     private float newXPos;
     private float newYPos;
     private float shootTimer;
+    private float powerTimer;
 
     void Start()
     {
-        shootTimer = 0.5f;
+        currentHealth = 5;
+        shootTimer = 0.3f;
+        powerTimer = 0;
         myTransform = transform.position;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -34,7 +41,8 @@ public class PlayerInputs : MonoBehaviour
     void Update()
     {
         shootTimer += Time.deltaTime;
-        
+        powerTimer += Time.deltaTime;
+
         shipXPos = Input.mousePosition.x;
         shipYPos = Input.mousePosition.y;
 
@@ -44,7 +52,7 @@ public class PlayerInputs : MonoBehaviour
 
         ChangeWeapons();
 
-        if (Input.GetMouseButton(0) && shootTimer >= 0.5f)
+        if (Input.GetMouseButton(0) && shootTimer >= 0.3f)
         {
             var newLaser = laser.GetLaserProjectile();
             if (newLaser != null)
@@ -59,7 +67,7 @@ public class PlayerInputs : MonoBehaviour
             soundEffects.PlayOneShot(laserSound.GetFireSound);
             shootTimer = 0;
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && powerTimer >= 5)
         {
             GameObject[] newLaser = new GameObject[3];
 
@@ -78,9 +86,21 @@ public class PlayerInputs : MonoBehaviour
                 }
             }
             soundEffects.PlayOneShot(laserSound.GetFireSound);
+            powerTimer = 0;
         }
 
         myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));
+
+        if (currentHealth <= 0)
+        {
+            if(!soundEffects.isPlaying)
+            {
+                soundEffects.PlayOneShot(powerOff);
+            }
+
+            currentHealth = 5;
+            Debug.Log("Game Over");
+        }
     }
 
     private void KeepPlayerInBounds()
@@ -97,9 +117,9 @@ public class PlayerInputs : MonoBehaviour
         {
             newXPos = Input.mousePosition.x;
         }
-        if (shipYPos <= (Screen.height - Screen.height) + 100)
+        if (shipYPos <= (Screen.height - Screen.height) + 120)
         {
-            newYPos = 100;
+            newYPos = 120;
         }
         else if (shipYPos >= (Screen.height - 400))
         {
@@ -146,6 +166,51 @@ public class PlayerInputs : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             collision.gameObject.SetActive(false);
+        }
+    }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "LeftWall")
+        {
+            if (!soundEffects.isPlaying)
+            {
+                soundEffects.PlayOneShot(wallImpactSound);
+            }
+        }
+
+        if (collision.gameObject.tag == "RightWall")
+        {
+            if (!soundEffects.isPlaying)
+            {
+                soundEffects.PlayOneShot(wallImpactSound);
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "LeftWall")
+        {
+            currentHealth -= 1;
+
+            if (!soundEffects.isPlaying)
+            {
+                soundEffects.PlayOneShot(warningBeep);
+                soundEffects.PlayOneShot(wallImpactSound);
+            }
+        }
+
+        if (collision.gameObject.tag == "RightWall")
+        {
+            currentHealth -= 1;
+
+            if (!soundEffects.isPlaying)
+            {
+                soundEffects.PlayOneShot(warningBeep);
+                soundEffects.PlayOneShot(wallImpactSound);
+            }
         }
     }
 }
