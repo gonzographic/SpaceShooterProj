@@ -19,6 +19,7 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private AudioClip wallImpactSound;
     [SerializeField] private AudioClip powerOff;
     [SerializeField] private AudioClip warningBeep;
+    [SerializeField] private AudioClip fullHealth;
     [SerializeField] private ProjectileSO laserSound;
     [SerializeField] private LaserPool laser;
     [SerializeField] private TextMeshProUGUI powerShotTime;
@@ -187,6 +188,13 @@ public class PlayerInputs : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             currentHealth -= 1;
+            collision.gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.layer == 9)
+        {
+            currentHealth = 5;
+            soundPower.PlayOneShot(fullHealth);
             collision.gameObject.SetActive(false);
         }
     }

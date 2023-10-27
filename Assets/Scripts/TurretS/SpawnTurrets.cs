@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpawnTurrets : MonoBehaviour
 {
     [SerializeField] private List<GameObject> turretSpawns;
     [SerializeField] private TurretPool turret;
+    [SerializeField] private TextMeshProUGUI turretKills;
+    [SerializeField] private TurretText currentKills;
 
     private float spawnInterval;
     private float spawnTimer;
+    
 
     void Start()
     {
@@ -16,13 +20,12 @@ public class SpawnTurrets : MonoBehaviour
         spawnTimer = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         spawnTimer -= Time.deltaTime;
         var spawnCount = Random.Range(0, 100);
 
-        if (spawnTimer <= 0 && spawnCount > 50)
+        if (spawnTimer <= 0 && spawnCount > 50 && currentKills.GetturretKills <= 19)
         {
             for (int i = 0; i < turretSpawns.Count; i++)
             {
@@ -41,7 +44,7 @@ public class SpawnTurrets : MonoBehaviour
             }
             spawnTimer = spawnInterval;
         }
-        else if (spawnTimer <= 0)
+        else if (spawnTimer <= 0 && currentKills.GetturretKills <= 19)
         {
             var newTurret = turret.GetTurret();
 

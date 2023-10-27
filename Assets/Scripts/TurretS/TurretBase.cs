@@ -20,6 +20,7 @@ public class TurretBase : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            Actions.KillCount?.Invoke(1);
             Instantiate(explosion, transform.position, transform.rotation);
             TurretDie();
         }

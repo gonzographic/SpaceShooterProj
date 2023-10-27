@@ -32,7 +32,7 @@ public class TurretShooting : MonoBehaviour
             if (newLaser != null)
             {
                 newLaser.transform.position = laserSpawnOne.transform.position;
-                newLaser.transform.rotation = laserSpawnOne.transform.rotation;
+                newLaser.transform.rotation = transform.rotation;
             }
 
             for (int i = 0; i < EnemyLaserPool.Instance.GetLaserProjectiles.Count; i++)
