@@ -18,7 +18,7 @@ public class SharkBoss : MonoBehaviour
 
     private void OnEnable()
     {
-        shootTimer = 1.5f;
+        shootTimer = 1;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -30,7 +30,6 @@ public class SharkBoss : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            //Instantiate(explosion, transform.position, transform.rotation);
             TurretDie();
         }
     }
@@ -45,23 +44,33 @@ public class SharkBoss : MonoBehaviour
     {
         if (shootTimer <= 0)
         {
-            var newLaser = EnemyLaserPool.Instance.GetLaserProjectile(); // Get make BOSS LASER POOL
-            var newLaserTwo = EnemyLaserPool.Instance.GetLaserProjectile();
+            var newLaser = BossLaserPool.Instance.GetLaserProjectile();
+
             if (newLaser != null)
             {
                 newLaser.transform.position = laserSpawns[0].transform.position;
                 newLaser.transform.rotation = transform.rotation;
+            }
+
+            for (int i = 0; i < BossLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            {
+                newLaser.SetActive(true);
+            }
+
+
+            var newLaserTwo = BossLaserPool.Instance.GetLaserProjectile();
+            if (newLaserTwo != null)
+            {
                 newLaserTwo.transform.position = laserSpawns[1].transform.position;
                 newLaserTwo.transform.rotation = transform.rotation;
             }
 
-            for (int i = 0; i < EnemyLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            for (int i = 0; i < BossLaserPool.Instance.GetLaserProjectiles.Count; i++)
             {
-                newLaser.SetActive(true);
                 newLaserTwo.SetActive(true);
             }
             //soundEffects.PlayOneShot(laserSound.GetFireSound);
-            shootTimer = 1.5f;
+            shootTimer = 1;
         }
     }
 
@@ -69,7 +78,7 @@ public class SharkBoss : MonoBehaviour
     {
         Vector3 rotation = player.transform.position - transform.position;
         float zAxisRotation = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, zAxisRotation);
+        transform.rotation = Quaternion.Euler(0, 0, zAxisRotation + 90);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
