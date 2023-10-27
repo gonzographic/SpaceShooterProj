@@ -11,6 +11,9 @@ public class BossFightStart : MonoBehaviour
     [SerializeField] private TurretText currentKills;
     [SerializeField] private TextMeshProUGUI turretKills;
     [SerializeField] private Light2D globalLight;
+    [SerializeField] private AudioSource soundSource;
+    [SerializeField] private AudioClip bossFight;
+    [SerializeField] private AudioClip bossIncoming;
 
     private int bossCount;
 
@@ -25,6 +28,7 @@ public class BossFightStart : MonoBehaviour
         {
             globalLight.color = Color.red;
             bossCount = 1;
+            soundSource.PlayOneShot(bossFight);
             Invoke("SpawnBoss", 4);
         }
     }
@@ -34,6 +38,7 @@ public class BossFightStart : MonoBehaviour
 
         if (!sharkBoss.activeInHierarchy && bossCount == 1)
         {
+            soundSource.PlayOneShot(bossIncoming);
             sharkBoss.transform.position = bossSpawn.transform.position;
             Instantiate(sharkBoss);
             Debug.Log("Im a Shark");

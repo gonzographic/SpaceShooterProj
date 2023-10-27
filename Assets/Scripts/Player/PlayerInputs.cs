@@ -24,6 +24,12 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private LaserPool laser;
     [SerializeField] private TextMeshProUGUI powerShotTime;
     [SerializeField] private GameObject explosion;
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject playScreen;
+    [SerializeField] private GameObject playScreenUI;
+    [SerializeField] private GameObject managers;
+    [SerializeField] private GameObject player;
+    //[SerializeField] private AudioSource thisMusic;
 
     private float currentHealth;
     private Vector3 myTransform;
@@ -110,6 +116,16 @@ public class PlayerInputs : MonoBehaviour
             }
             soundLasers.PlayOneShot(laserSound.GetFireSound);
             powerTimer = 5;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //thisMusic.Stop();
+            mainMenu.SetActive(true);
+            managers.SetActive(false);
+            playScreen.SetActive(false);
+            playScreenUI.SetActive(false);
+            player.SetActive(false);
         }
 
         myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));
