@@ -23,6 +23,7 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] private ProjectileSO laserSound;
     [SerializeField] private LaserPool laser;
     [SerializeField] private TextMeshProUGUI powerShotTime;
+    [SerializeField] private GameObject explosion;
 
     private float currentHealth;
     private Vector3 myTransform;
@@ -119,6 +120,9 @@ public class PlayerInputs : MonoBehaviour
             {
                 soundPower.PlayOneShot(powerOff);
             }
+
+            Instantiate(explosion, transform.position, transform.rotation);
+            Actions.KillCount?.Invoke(0);
       
             currentHealth = 5;
             Debug.Log("Game Over");

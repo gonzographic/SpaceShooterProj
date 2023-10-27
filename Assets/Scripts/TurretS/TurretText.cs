@@ -26,7 +26,15 @@ public class TurretText : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        currentKills += amount;
-        killText.text = currentKills.ToString();
+        if (amount == 0)
+        {
+            currentKills = 0;
+            killText.text = currentKills.ToString();
+        }
+        else
+        {
+            currentKills += amount;
+            killText.text = currentKills.ToString();
+        }
     }
 }
