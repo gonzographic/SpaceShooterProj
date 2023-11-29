@@ -1,52 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    [SerializeField] private PlayerInputs player;
-    [SerializeField] private Image background;
-    [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] private Color colorFull;
-    [SerializeField] private Color colorEighty;
-    [SerializeField] private Color colorSixty;
-    [SerializeField] private Color colorForty;
-    [SerializeField] private Color colorTwenty;
-    [SerializeField] private Color colorDead;
+    [SerializeField] private PlayerInputs mPlayer = null;
+    [SerializeField] private Image mBackground = null;
+    [SerializeField] private TextMeshProUGUI mHealthText = null;
+    [SerializeField] private Color mColorFull = Color.white;
+    [SerializeField] private Color mColorEighty = Color.white;
+    [SerializeField] private Color mColorSixty = Color.white;
+    [SerializeField] private Color mColorForty = Color.white;
+    [SerializeField] private Color mColorTwenty = Color.white;
+    [SerializeField] private Color mColorDead = Color.white;
 
     private void Update()
     {
-        if (player.GetHealth == 5)
+        if (mPlayer.GetHealth == 5)
         {
-            healthText.text = "100%";
-            background.color = colorFull;
+            mHealthText.text = "100%";
+            mBackground.color = mColorFull;
         }
-        else if (player.GetHealth == 4)
+        else if (mPlayer.GetHealth == 4)
         {
-            healthText.text = "80%";
-            background.color = colorEighty;
+            mHealthText.text = "80%";
+            mBackground.color = mColorEighty;
         }
-        else if (player.GetHealth == 3)
+        else if (mPlayer.GetHealth == 3)
         {
-            healthText.text = "60%";
-            background.color = colorSixty;
+            mHealthText.text = "60%";
+            mBackground.color = mColorSixty;
         }
-        else if (player.GetHealth == 2)
+        else if (mPlayer.GetHealth == 2)
         {
-            healthText.text = "40%";
-            background.color = colorForty;
+            mHealthText.text = "40%";
+            mBackground.color = mColorForty;
         }
-        else if (player.GetHealth == 1)
+        else if (mPlayer.GetHealth == 1)
         {
-            healthText.text = "20%";
-            background.color = colorTwenty;
+            mHealthText.text = "20%";
+            mBackground.color = mColorTwenty;
         }
-        else if (player.GetHealth == 0)
+        else if (mPlayer.GetHealth == 0)
         {
-            healthText.text = "0%";
-            background.color = colorDead;
+            mHealthText.text = "0%";
+            mBackground.color = mColorDead;
         }
     }
 }

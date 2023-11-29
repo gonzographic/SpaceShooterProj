@@ -1,64 +1,63 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class SpawnTurrets : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> turretSpawns;
-    [SerializeField] private TurretPool turret;
-    [SerializeField] private TextMeshProUGUI turretKills;
-    [SerializeField] private TurretText currentKills;
+    [SerializeField] private List<GameObject> mTurretSpawns = null;
+    [SerializeField] private TurretPool mTurret = null;
+    [SerializeField] private TextMeshProUGUI mTurretKills = null;
+    [SerializeField] private TurretText mCurrentKills = null;
 
-    private float spawnInterval;
-    private float spawnTimer;
+    private float mSpawnInterval;
+    private float mSpawnTimer;
     
 
     void Start()
     {
-        spawnInterval = 3.3f;
-        spawnTimer = 0;
+        mSpawnInterval = 3.3f;
+        mSpawnTimer = 0.0f;
     }
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
+        mSpawnTimer -= Time.deltaTime;
         var spawnCount = Random.Range(0, 100);
 
-        if (spawnTimer <= 0 && spawnCount > 50 && currentKills.GetturretKills <= 19)
+        if (mSpawnTimer <= 0 && spawnCount > 50 && mCurrentKills.GetturretKills <= 19)
         {
-            for (int i = 0; i < turretSpawns.Count; i++)
+            for (int i = 0; i < mTurretSpawns.Count; i++)
             {
-                var newTurret = turret.GetTurret();
+                var newTurret = mTurret.GetTurret();
 
                 if (newTurret != null)
                 {
-                    newTurret.transform.position = turretSpawns[i].transform.position;
+                    newTurret.transform.position = mTurretSpawns[i].transform.position;
                 }
 
-                for (int j = 0; j < turret.GetTurrets.Count; j++)
+                for (int j = 0; j < mTurret.GetTurrets.Count; j++)
                 {
                     newTurret.SetActive(true);
                 }
 
             }
-            spawnTimer = spawnInterval;
+            mSpawnTimer = mSpawnInterval;
         }
-        else if (spawnTimer <= 0 && currentKills.GetturretKills <= 19)
+        else if (mSpawnTimer <= 0 && mCurrentKills.GetturretKills <= 19)
         {
-            var newTurret = turret.GetTurret();
+            var newTurret = mTurret.GetTurret();
 
             if (newTurret != null)
             {
-                var randSpawn = Random.Range(0, turretSpawns.Count);
-                newTurret.transform.position = turretSpawns[randSpawn].transform.position;
+                var randSpawn = Random.Range(0, mTurretSpawns.Count);
+                newTurret.transform.position = mTurretSpawns[randSpawn].transform.position;
             }
 
-            for (int i = 0; i < turret.GetTurrets.Count; i++)
+            for (int i = 0; i < mTurret.GetTurrets.Count; i++)
             {
                 newTurret.SetActive(true);
             }
-            spawnTimer = spawnInterval;
+            mSpawnTimer = mSpawnInterval;
         }
     }
 }

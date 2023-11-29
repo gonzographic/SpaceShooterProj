@@ -3,39 +3,39 @@ using UnityEngine;
 
 public class LaserPool : MonoBehaviour
 {
-    [SerializeField] private GameObject laserProjectile;
+    [SerializeField] private GameObject mLaserProjectile = null;
 
-    private List<GameObject> laserProjectiles;
-    public List<GameObject> GetLaserProjectiles => laserProjectiles;
+    private List<GameObject> mLaserProjectiles;
+    private int mAmountOfLaserProjectiles;
 
-    private int amountOfLaserProjectiles;
+    public List<GameObject> GetLaserProjectiles => mLaserProjectiles;
+
 
     private void Start()
     {
-        laserProjectiles = new List<GameObject>();
+        mLaserProjectiles = new List<GameObject>();
+        mAmountOfLaserProjectiles = 50;
 
-        amountOfLaserProjectiles = 50;
-
-        for (int i = 0; i < amountOfLaserProjectiles; i++)
+        for (int i = 0; i < mAmountOfLaserProjectiles; i++)
         {
-            laserProjectiles.Add(Instantiate(laserProjectile, transform));
-            laserProjectiles[i].SetActive(false);
+            mLaserProjectiles.Add(Instantiate(mLaserProjectile, transform));
+            mLaserProjectiles[i].SetActive(false);
         }
     }
 
     public GameObject GetLaserProjectile()
     {
-        for (int i = 0; i < amountOfLaserProjectiles; i++)
+        for (int i = 0; i < mAmountOfLaserProjectiles; i++)
         {
-            if (!laserProjectiles[i].activeInHierarchy)
+            if (!mLaserProjectiles[i].activeInHierarchy)
             {
-                return laserProjectiles[i];
+                return mLaserProjectiles[i];
             }
         }
 
-        var newLaser = Instantiate(laserProjectile, transform);
-        laserProjectile.gameObject.SetActive(false);
-        laserProjectiles.Add(newLaser);
+        var newLaser = Instantiate(mLaserProjectile, transform);
+        mLaserProjectile.gameObject.SetActive(false);
+        mLaserProjectiles.Add(newLaser);
 
         return newLaser;
     }

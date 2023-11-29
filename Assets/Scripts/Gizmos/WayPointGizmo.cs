@@ -1,23 +1,26 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class WayPointGizmo : MonoBehaviour
+public class WaypointGizmo : MonoBehaviour
 {
-    [SerializeField] private float size = 1;
+    [SerializeField] private float mSphereSize = 1;
 
-    private Transform[] wayPoints;
+    private Transform[] mWaypoints;
+
+    private void Awake()
+    {
+        mWaypoints = GetComponentsInChildren<Transform>();
+    }
 
     private void OnDrawGizmos()
     {
-        wayPoints = GetComponentsInChildren<Transform>();
-        var last = wayPoints[wayPoints.Length - 1].position;
+        var lastWayPoint = mWaypoints[^1].position;
 
-        for(int i = 1; i < wayPoints.Length; i++)
+        for(int i = 1; i < mWaypoints.Length; i++)
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawSphere(wayPoints[i].position, size);
-            Gizmos.DrawLine(last, wayPoints[i].position);
-            last = wayPoints[i].position;
+            Gizmos.DrawSphere(mWaypoints[i].position, mSphereSize);
+            Gizmos.DrawLine(lastWayPoint, mWaypoints[i].position);
+            lastWayPoint = mWaypoints[i].position;
         }
     }
 }

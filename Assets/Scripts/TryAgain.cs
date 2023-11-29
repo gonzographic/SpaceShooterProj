@@ -1,23 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class TryAgain : MonoBehaviour
 {
-    [SerializeField] private GameObject thisScreen;
-    [SerializeField] private GameObject playScreen;
-    [SerializeField] private GameObject playScreenUI;
-    [SerializeField] private GameObject managers;
-    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject mThisScreen = null;
+    [SerializeField] private GameObject mPlayScreen = null;
+    [SerializeField] private GameObject mPlayScreenUI = null;
+    [SerializeField] private GameObject mManagers = null;
+    [SerializeField] private GameObject mPlayer = null;
 
     public void ClickStartGame()
     {
-        thisScreen.SetActive(false);
-        managers.SetActive(true);
-        playScreen.SetActive(true);
-        playScreenUI.SetActive(true);
-        player.SetActive(true);
+        mThisScreen.SetActive(false);
+        mManagers.SetActive(true);
+        mPlayScreen.SetActive(true);
+        mPlayScreenUI.SetActive(true);
+        mPlayer.SetActive(true);
     }
 
     public void ClickExitGame()

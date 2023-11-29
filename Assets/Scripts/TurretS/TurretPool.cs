@@ -3,39 +3,38 @@ using UnityEngine;
 
 public class TurretPool : MonoBehaviour
 {
-    [SerializeField] private GameObject turret;
+    [SerializeField] private GameObject mTurret = null;
 
-    private List<GameObject> turrets;
-    public List<GameObject> GetTurrets => turrets;
+    private List<GameObject> mTurrets;
+    private int mAmountOfTurrets;
 
-    private int amountOfTurrets;
+    public List<GameObject> GetTurrets => mTurrets;
 
     private void Start()
     {
-        turrets = new List<GameObject>();
+        mTurrets = new List<GameObject>();
+        mAmountOfTurrets = 8;
 
-        amountOfTurrets = 8;
-
-        for (int i = 0; i < amountOfTurrets; i++)
+        for (int i = 0; i < mAmountOfTurrets; i++)
         {
-            turrets.Add(Instantiate(turret, transform));
-            turrets[i].SetActive(false);
+            mTurrets.Add(Instantiate(mTurret, transform));
+            mTurrets[i].SetActive(false);
         }
     }
 
     public GameObject GetTurret()
     {
-        for (int i = 0; i < amountOfTurrets; i++)
+        for (int i = 0; i < mAmountOfTurrets; i++)
         {
-            if (!turrets[i].activeInHierarchy)
+            if (!mTurrets[i].activeInHierarchy)
             {
-                return turrets[i];
+                return mTurrets[i];
             }
         }
 
-        var newTurret = Instantiate(turret, transform);
-        turret.gameObject.SetActive(false);
-        turrets.Add(newTurret);
+        var newTurret = Instantiate(mTurret, transform);
+        mTurret.gameObject.SetActive(false);
+        mTurrets.Add(newTurret);
 
         return newTurret;
     }

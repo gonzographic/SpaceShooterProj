@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe218e771a7b8f4083aa1ddb4307b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileData: {fileID: 11400000, guid: 59c38d5517fa7bb4cac32eefb6f2c9f1, type: 2}
-  myRigidbody: {fileID: 4364296428143894316}
+  mProjectileData: {fileID: 11400000, guid: 59c38d5517fa7bb4cac32eefb6f2c9f1, type: 2}
+  mRigidbody: {fileID: 4364296428143894316}
 --- !u!58 &7879148075020290211
 CircleCollider2D:
   m_ObjectHideFlags: 0

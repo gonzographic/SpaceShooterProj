@@ -1,19 +1,17 @@
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TurretBase", menuName = "ScriptableObjects/TurretBase")]
 public class TurretSO : ScriptableObject
 {
-    [SerializeField] private float rateOfFire;
-    [SerializeField] private float health;
-    [SerializeField] private GameObject projectileUsed;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private EnemyLaserPool laser;
+    [SerializeField] private float mRateOfFire = 0.0f;
+    [SerializeField] private float mHealth = 0.0f;
+    [SerializeField] private float mMoveSpeed = 0.0f;
+    [SerializeField] private GameObject mProjectileUsed = null;
+    [SerializeField] private EnemyLaserPool mLaser = null;
 
-    public float GetRateOfFire => rateOfFire;
-    public float GetHealth => health;
-    public GameObject GetProjectileUsed => projectileUsed;
-    public float GetMoveSpeed => moveSpeed;
-    public EnemyLaserPool GetLaserPool => laser;
+    public float GetRateOfFire => mRateOfFire;
+    public float GetHealth => mHealth;
+    public float GetMoveSpeed => mMoveSpeed;
+    public GameObject GetProjectileUsed => mProjectileUsed;
+    public EnemyLaserPool GetLaserPool => mLaser;
 }

@@ -168,14 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6f904ada1b41044b747be5879db833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossSpawn: {fileID: 1942435898}
-  sharkBoss: {fileID: 7726562507349985167, guid: ce614e5ebb9bbc0438d8664f8a642478, type: 3}
-  currentKills: {fileID: 2008561872}
-  turretKills: {fileID: 2008561870}
-  globalLight: {fileID: 618496532}
-  soundSource: {fileID: 103330611}
-  bossFight: {fileID: 8300000, guid: a3016b5b44a4ec14aa0da0b5df7f9c5b, type: 3}
-  bossIncoming: {fileID: 8300000, guid: 03f8bb464ae7a3f48831d53a5ccc8b56, type: 3}
+  mBossSpawn: {fileID: 858648845}
+  mSharkBoss: {fileID: 7726562507349985167, guid: ce614e5ebb9bbc0438d8664f8a642478, type: 3}
+  mCurrentKills: {fileID: 2008561872}
+  mTurretKills: {fileID: 2113064305}
+  mGlobalLight: {fileID: 618496532}
+  mSoundSource: {fileID: 103330611}
+  mBossFight: {fileID: 8300000, guid: 03f8bb464ae7a3f48831d53a5ccc8b56, type: 3}
+  mBossIncoming: {fileID: 8300000, guid: a3016b5b44a4ec14aa0da0b5df7f9c5b, type: 3}
 --- !u!82 &103330611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650f18427eba9d54cb218db056c4a504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGround: {fileID: 207657313}
-  timeText: {fileID: 621236814}
-  greenGo: {r: 0, g: 1, b: 0, a: 0.39215687}
-  yellowNo: {r: 1, g: 1, b: 0, a: 0.39215687}
+  mBackground: {fileID: 207657313}
+  mTimeText: {fileID: 621236814}
+  mGreenGo: {r: 1, g: 1, b: 1, a: 1}
+  mYellowNo: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &226777135
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,8 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464c4b8e65766b24a960e49bb77bf5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollData: {fileID: 11400000, guid: 5ba3b578b7f94df418b226b0c48f20d3, type: 2}
-  backgroundImage: {fileID: 374703753}
+  mScrollData: {fileID: 11400000, guid: 5ba3b578b7f94df418b226b0c48f20d3, type: 2}
+  mBackgroundImage: {fileID: 374703753}
 --- !u!114 &374703753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,8 +1248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464c4b8e65766b24a960e49bb77bf5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollData: {fileID: 11400000, guid: 5164963ef60fde74f81e3f21e59cd3db, type: 2}
-  backgroundImage: {fileID: 564806658}
+  mScrollData: {fileID: 11400000, guid: 5164963ef60fde74f81e3f21e59cd3db, type: 2}
+  mBackgroundImage: {fileID: 1290263123}
 --- !u!114 &564806658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe0691a9687f714fbfcfe4ea89e456f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserProjectile: {fileID: 2267739600030115732, guid: d43e1e62356ac064bb7fba2b4fa3d35a, type: 3}
+  mLaserProjectile: {fileID: 2267739600030115732, guid: d43e1e62356ac064bb7fba2b4fa3d35a, type: 3}
 --- !u!114 &573194720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a5928c1d397af4693443ee63a20c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 3863884969384650663, guid: 79d9bdbb090e1b04c8c54d1d90ae2ebe, type: 3}
+  mTurret: {fileID: 3863884969384650663, guid: 79d9bdbb090e1b04c8c54d1d90ae2ebe, type: 3}
 --- !u!114 &573194721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f245e5ffedc23f4bb3cdef7da4b815a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserProjectile: {fileID: 2267739600030115732, guid: 82b373339280c864c97d1c21e56a09d9, type: 3}
+  mLaserProjectile: {fileID: 2267739600030115732, guid: 82b373339280c864c97d1c21e56a09d9, type: 3}
 --- !u!114 &573194722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2108ec684b11d42bee7c7167ddd74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPickup: {fileID: 1749054209841046476, guid: 6ca016305db22844c950346558cfc219, type: 3}
+  mHealthPickup: {fileID: 1749054209841046476, guid: 6ca016305db22844c950346558cfc219, type: 3}
 --- !u!114 &573194723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86787b0304a58a34696d00a9a84ad140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserProjectile: {fileID: 2267739600030115732, guid: c8e5e09325c818649b16bb7121492227, type: 3}
+  mLaserProjectile: {fileID: 2267739600030115732, guid: c8e5e09325c818649b16bb7121492227, type: 3}
 --- !u!1 &618496531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,8 +1784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464c4b8e65766b24a960e49bb77bf5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollData: {fileID: 11400000, guid: 26801de8c4007a744aec3ece805ee72e, type: 2}
-  backgroundImage: {fileID: 656446724}
+  mScrollData: {fileID: 11400000, guid: 26801de8c4007a744aec3ece805ee72e, type: 2}
+  mBackgroundImage: {fileID: 656446724}
 --- !u!114 &656446724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,15 +1910,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76693503d50bcba43ac19fbd861da469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 789086833}
-  background: {fileID: 735065607}
-  healthText: {fileID: 272024218}
-  colorFull: {r: 0, g: 1, b: 0, a: 0.5882353}
-  colorEighty: {r: 0.7650783, g: 1, b: 0, a: 0.5882353}
-  colorSixty: {r: 1, g: 0.7532815, b: 0, a: 0.5882353}
-  colorForty: {r: 1, g: 0.38459545, b: 0, a: 0.5882353}
-  colorTwenty: {r: 1, g: 0.23698506, b: 0, a: 0.5882353}
-  colorDead: {r: 1, g: 0, b: 0, a: 0.5882353}
+  mPlayer: {fileID: 789086833}
+  mBackground: {fileID: 1690454754}
+  mHealthText: {fileID: 272024218}
+  mColorFull: {r: 1, g: 1, b: 1, a: 1}
+  mColorEighty: {r: 1, g: 1, b: 1, a: 1}
+  mColorSixty: {r: 1, g: 1, b: 1, a: 1}
+  mColorForty: {r: 1, g: 1, b: 1, a: 1}
+  mColorTwenty: {r: 1, g: 1, b: 1, a: 1}
+  mColorDead: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &789086826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,32 +2195,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d184d400b3e1e47969c204714c158a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidbody: {fileID: 789086832}
-  myAnimator: {fileID: 789086829}
-  laserAmmo: {fileID: 2267739600030115732, guid: d43e1e62356ac064bb7fba2b4fa3d35a, type: 3}
-  bulletSpawnMiddle: {fileID: 1079990306}
-  bulletSpawnLeft: {fileID: 639334907}
-  bulletSpawnRight: {fileID: 966185611}
-  spawnPoints:
-  - {fileID: 639334907}
-  - {fileID: 1079990306}
-  - {fileID: 966185611}
-  soundEffects: {fileID: 789086835}
-  soundLasers: {fileID: 789086836}
-  soundPower: {fileID: 789086837}
-  wallImpactSound: {fileID: 8300000, guid: 3b01fc0385dce5d498581f5ddb00926e, type: 3}
-  powerOff: {fileID: 8300000, guid: e89db03ec15dfcb4ea8cd4664168d892, type: 3}
-  warningBeep: {fileID: 8300000, guid: a3016b5b44a4ec14aa0da0b5df7f9c5b, type: 3}
-  fullHealth: {fileID: 8300000, guid: e53780473028d0c4c9120e1bb935f024, type: 3}
-  laserSound: {fileID: 11400000, guid: a4f7046b2b803574896afb24c99756c9, type: 2}
-  laser: {fileID: 573194719}
-  powerShotTime: {fileID: 621236814}
-  explosion: {fileID: 5701922424162114191, guid: 6ff522a2a0b3b2940b63ec64c3ca25b3, type: 3}
-  mainMenu: {fileID: 1214442564}
-  playScreen: {fileID: 1862219797}
-  playScreenUI: {fileID: 1577102877}
-  managers: {fileID: 1531560529}
-  player: {fileID: 789086826}
+  mPlayer: {fileID: 789086826}
+  mAnimator: {fileID: 789086829}
+  mRigidbody: {fileID: 789086832}
+  mLaserAmmo: {fileID: 2267739600030115732, guid: d43e1e62356ac064bb7fba2b4fa3d35a, type: 3}
+  mBulletSpawnMiddle: {fileID: 1079990306}
+  mBulletSpawnLeft: {fileID: 639334907}
+  mBulletSpawnRight: {fileID: 966185611}
+  mExplosion: {fileID: 5701922424162114191, guid: 6ff522a2a0b3b2940b63ec64c3ca25b3, type: 3}
+  mMainMenu: {fileID: 2127017149}
+  mPlayScreen: {fileID: 1862219797}
+  mPlayScreenUI: {fileID: 1577102877}
+  mManagers: {fileID: 1531560529}
+  mLaserPool: {fileID: 573194719}
+  mLaser: {fileID: 11400000, guid: a4f7046b2b803574896afb24c99756c9, type: 2}
+  mSpawnPoints: []
+  mPowerShotTimeText: {fileID: 621236814}
+  mSoundEffects: {fileID: 789086835}
+  mSoundLasers: {fileID: 789086836}
+  mSoundPower: {fileID: 789086837}
+  mWallImpactSound: {fileID: 8300000, guid: 7988e64feb0191248b9d09c82da9e558, type: 3}
+  mPowerOffSound: {fileID: 8300000, guid: e89db03ec15dfcb4ea8cd4664168d892, type: 3}
+  mWarningBeepSound: {fileID: 8300000, guid: a3016b5b44a4ec14aa0da0b5df7f9c5b, type: 3}
+  mFullHealthSound: {fileID: 8300000, guid: c91563530eb337840896d0041390b1eb, type: 3}
 --- !u!114 &789086834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3336,12 +3333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417479539be21c040b84be866605cf4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisScreen: {fileID: 1214442564}
-  playScreen: {fileID: 1862219797}
-  playScreenUI: {fileID: 1577102877}
-  managers: {fileID: 1531560529}
-  player: {fileID: 789086826}
-  thisMusic: {fileID: 1214442569}
+  mThisScreen: {fileID: 1214442564}
+  mPlayScreen: {fileID: 1862219797}
+  mPlayScreenUI: {fileID: 1577102877}
+  mManagers: {fileID: 1531560529}
+  mPlayer: {fileID: 789086826}
+  mThisMusic: {fileID: 1214442569}
 --- !u!1 &1290263120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3392,7 +3389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fb2ef6eb300dd468cf232e8ab727b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundImage: {fileID: 1290263123}
+  mBackgroundImage: {fileID: 1290263123}
 --- !u!114 &1290263123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3524,8 +3521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464c4b8e65766b24a960e49bb77bf5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollData: {fileID: 11400000, guid: 1cba0ec10fc92cb47aec690d1eff4c4d, type: 2}
-  backgroundImage: {fileID: 1326351587}
+  mScrollData: {fileID: 11400000, guid: 1cba0ec10fc92cb47aec690d1eff4c4d, type: 2}
+  mBackgroundImage: {fileID: 1326351587}
 --- !u!114 &1326351587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3936,13 +3933,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e778ffe5757d27e4284c6e7c67c1ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretSpawns:
+  mTurretSpawns:
   - {fileID: 2069709514}
   - {fileID: 226777135}
   - {fileID: 858648845}
-  turret: {fileID: 573194720}
-  turretKills: {fileID: 2008561870}
-  currentKills: {fileID: 2008561872}
+  mTurret: {fileID: 573194720}
+  mTurretKills: {fileID: 2008561870}
+  mCurrentKills: {fileID: 2008561872}
 --- !u!114 &1509389449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3955,9 +3952,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53095dafaeee244e9a54e30fa44f653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSpawns:
+  mPickupSpawns:
   - {fileID: 1546474317}
-  healthPickup: {fileID: 573194722}
+  - {fileID: 1942435898}
+  - {fileID: 181439608}
+  mHealthPickup: {fileID: 573194722}
 --- !u!1 &1531560529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,8 +4432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464c4b8e65766b24a960e49bb77bf5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollData: {fileID: 11400000, guid: 8c5ded8df289d874883c1337cea7be78, type: 2}
-  backgroundImage: {fileID: 1829503834}
+  mScrollData: {fileID: 11400000, guid: 8c5ded8df289d874883c1337cea7be78, type: 2}
+  mBackgroundImage: {fileID: 1829503834}
 --- !u!114 &1829503834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,9 +4942,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14017cdd3582414a8e6f651d2a135d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundSource: {fileID: 1862219802}
-  startVoice: {fileID: 8300000, guid: e5bc374e9aa52634fbc4f840b3a7fd50, type: 3}
-  powerUp: {fileID: 8300000, guid: c91563530eb337840896d0041390b1eb, type: 3}
+  mSoundSource: {fileID: 1862219802}
+  mStartVoice: {fileID: 8300000, guid: e5bc374e9aa52634fbc4f840b3a7fd50, type: 3}
+  mPowerUp: {fileID: 8300000, guid: c91563530eb337840896d0041390b1eb, type: 3}
 --- !u!82 &1862219804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5296,10 +5295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650f18427eba9d54cb218db056c4a504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGround: {fileID: 1926810654}
-  timeText: {fileID: 621236814}
-  greenGo: {r: 0, g: 1, b: 0, a: 0.39215687}
-  yellowNo: {r: 1, g: 1, b: 0, a: 0.39215687}
+  mBackground: {fileID: 1926810654}
+  mTimeText: {fileID: 621236814}
+  mGreenGo: {r: 1, g: 1, b: 1, a: 1}
+  mYellowNo: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1942336527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,7 +5611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b9b8df7e118dc4f889aa61e0801373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killText: {fileID: 2008561870}
+  mKillText: {fileID: 2008561870}
 --- !u!1 &2069709514
 GameObject:
   m_ObjectHideFlags: 0

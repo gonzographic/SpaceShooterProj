@@ -1,34 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class BossFightStart : MonoBehaviour
 {
-    [SerializeField] private GameObject bossSpawn;
-    [SerializeField] private GameObject sharkBoss;
-    [SerializeField] private TurretText currentKills;
-    [SerializeField] private TextMeshProUGUI turretKills;
-    [SerializeField] private Light2D globalLight;
-    [SerializeField] private AudioSource soundSource;
-    [SerializeField] private AudioClip bossFight;
-    [SerializeField] private AudioClip bossIncoming;
+    [SerializeField] private GameObject mBossSpawn = null;
+    [SerializeField] private GameObject mSharkBoss = null;
+    [SerializeField] private TurretText mCurrentKills = null;
+    [SerializeField] private TextMeshProUGUI mTurretKills = null;
+    [SerializeField] private Light2D mGlobalLight = null;
+    [SerializeField] private AudioSource mSoundSource = null;
+    [SerializeField] private AudioClip mBossFight = null;
+    [SerializeField] private AudioClip mBossIncoming = null;
 
-    private int bossCount;
+    private int mBossCount;
 
     private void Start()
     {
-        bossCount = 0;
+        mBossCount = 0;
     }
 
     private void Update()
     {
-        if (currentKills.GetturretKills >= 20 && bossCount <= 0)
+        if (mCurrentKills.GetturretKills >= 20 && mBossCount <= 0)
         {
-            globalLight.color = Color.red;
-            bossCount = 1;
-            soundSource.PlayOneShot(bossFight);
+            mGlobalLight.color = Color.red;
+            mBossCount = 1;
+            mSoundSource.PlayOneShot(mBossFight);
             Invoke("SpawnBoss", 4);
         }
     }
@@ -36,11 +34,11 @@ public class BossFightStart : MonoBehaviour
     private void SpawnBoss()
     {
 
-        if (!sharkBoss.activeInHierarchy && bossCount == 1)
+        if (!mSharkBoss.activeInHierarchy && mBossCount == 1)
         {
-            soundSource.PlayOneShot(bossIncoming);
-            sharkBoss.transform.position = bossSpawn.transform.position;
-            Instantiate(sharkBoss);
+            mSoundSource.PlayOneShot(mBossIncoming);
+            mSharkBoss.transform.position = mBossSpawn.transform.position;
+            Instantiate(mSharkBoss);
             Debug.Log("Im a Shark");
         }
     }

@@ -1,25 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    [SerializeField] private float delay = 0f;
-    [SerializeField] private AudioSource playSFX;
-    [SerializeField] private AudioClip explosionSound;
+    [SerializeField] private AudioSource mPlaySFX = null;
+    [SerializeField] private AudioClip mExplosionSound = null;
+    [SerializeField] private float mDelay = 0.0f;
 
-    private float waitTime;
+    private float mWaitTime;
 
     private void OnEnable()
     {
-        playSFX.PlayOneShot(explosionSound);
+        mPlaySFX.PlayOneShot(mExplosionSound);
+    }
+
+    private void Start()
+    {
+        mWaitTime = 0.0f;
     }
 
     private void Update()
     {
-        waitTime += Time.deltaTime;
+        mWaitTime += Time.deltaTime;
 
-        if (waitTime >= delay)
+        if (mWaitTime >= mDelay)
         {
             gameObject.SetActive(false);
         }

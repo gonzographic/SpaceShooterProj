@@ -416,8 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217277c04474c7349b295ccf37d5f7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretData: {fileID: 11400000, guid: 3fc6279fd9e859647b557c2a82ff7907, type: 2}
-  laserSpawnOne: {fileID: 8581969586446123798}
+  mTurretData: {fileID: 0}
+  mLaserPool: {fileID: 0}
+  mLaserSpawnOne: {fileID: 0}
 --- !u!61 &8069878946033620443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -751,8 +752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08802a75aae6bd342a059f190f0ff3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretData: {fileID: 11400000, guid: 3fc6279fd9e859647b557c2a82ff7907, type: 2}
-  explosion: {fileID: 5701922424162114191, guid: 6ff522a2a0b3b2940b63ec64c3ca25b3, type: 3}
+  mTurretData: {fileID: 11400000, guid: 3fc6279fd9e859647b557c2a82ff7907, type: 2}
+  mExplosion: {fileID: 5701922424162114191, guid: 6ff522a2a0b3b2940b63ec64c3ca25b3, type: 3}
 --- !u!1 &5739596800397395217
 GameObject:
   m_ObjectHideFlags: 0

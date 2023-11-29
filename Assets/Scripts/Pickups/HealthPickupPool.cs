@@ -3,39 +3,39 @@ using UnityEngine;
 
 public class HealthPickupPool : MonoBehaviour
 {
-    [SerializeField] private GameObject healthPickup;
+    [SerializeField] private GameObject mHealthPickup = null;
 
-    private List<GameObject> healthPickups;
-    public List<GameObject> GetHealthPickups => healthPickups;
+    private List<GameObject> mHealthPickups;
+    private int mAmountOfHealthPickups;
 
-    private int amountOfHealthPickups;
+    public List<GameObject> GetHealthPickups => mHealthPickups;
+
 
     private void Start()
     {
-        healthPickups = new List<GameObject>();
+        mHealthPickups = new List<GameObject>();
+        mAmountOfHealthPickups = 1;
 
-        amountOfHealthPickups = 1;
-
-        for (int i = 0; i < amountOfHealthPickups; i++)
+        for (int i = 0; i < mAmountOfHealthPickups; i++)
         {
-            healthPickups.Add(Instantiate(healthPickup, transform));
-            healthPickups[i].SetActive(false);
+            mHealthPickups.Add(Instantiate(mHealthPickup, transform));
+            mHealthPickups[i].SetActive(false);
         }
     }
 
     public GameObject GetHealthPickup()
     {
-        for (int i = 0; i < amountOfHealthPickups; i++)
+        for (int i = 0; i < mAmountOfHealthPickups; i++)
         {
-            if (!healthPickups[i].activeInHierarchy)
+            if (!mHealthPickups[i].activeInHierarchy)
             {
-                return healthPickups[i];
+                return mHealthPickups[i];
             }
         }
 
-        var newHealthPickup = Instantiate(healthPickup, transform);
-        healthPickup.gameObject.SetActive(false);
-        healthPickups.Add(newHealthPickup);
+        var newHealthPickup = Instantiate(mHealthPickup, transform);
+        mHealthPickup.SetActive(false);
+        mHealthPickups.Add(newHealthPickup);
 
         return newHealthPickup;
     }

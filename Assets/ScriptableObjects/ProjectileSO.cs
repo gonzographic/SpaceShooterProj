@@ -3,9 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ProjectileBase", menuName = "ScriptableObjects/ProjectileBase")]
 public class ProjectileSO : ScriptableObject
 {
-    [SerializeField] private AudioClip fireSound;
-    [SerializeField] private float travelSpeed;
+    [SerializeField] private AudioClip mFireSound = null;
+    [SerializeField] private float mSpeed = 0.0f;
 
-    public AudioClip GetFireSound => fireSound;
-    public float GetTravelSpeed => travelSpeed;
+    public AudioClip GetFireSound => mFireSound;
+    public float GetSpeed => mSpeed;
 }

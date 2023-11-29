@@ -3,26 +3,26 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject thisScreen;
-    [SerializeField] private GameObject playScreen;
-    [SerializeField] private GameObject playScreenUI;
-    [SerializeField] private GameObject managers;
-    [SerializeField] private GameObject player;
-    [SerializeField] private AudioSource thisMusic;
+    [SerializeField] private GameObject mThisScreen = null;
+    [SerializeField] private GameObject mPlayScreen = null;
+    [SerializeField] private GameObject mPlayScreenUI = null;
+    [SerializeField] private GameObject mManagers = null;
+    [SerializeField] private GameObject mPlayer = null;
+    [SerializeField] private AudioSource mThisMusic = null;
 
     private void Start()
     {
-        thisMusic.Play();
+        mThisMusic.Play();
     }
 
     public void ClickStartGame()
     {
-        thisMusic.Stop();
-        thisScreen.SetActive(false);
-        managers.SetActive(true);
-        playScreen.SetActive(true);
-        playScreenUI.SetActive(true);
-        player.SetActive(true);
+        mThisMusic.Stop();
+        mThisScreen.SetActive(false);
+        mManagers.SetActive(true);
+        mPlayScreen.SetActive(true);
+        mPlayScreenUI.SetActive(true);
+        mPlayer.SetActive(true);
     }
 
     public void ClickExitGame()

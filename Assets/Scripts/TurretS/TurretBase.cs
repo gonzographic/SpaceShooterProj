@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretBase : MonoBehaviour
 {
-    [SerializeField] private TurretSO turretData;
-    [SerializeField] private GameObject explosion;
+    [SerializeField] private TurretSO mTurretData = null;
+    [SerializeField] private GameObject mExplosion = null;
 
-    private float currentHealth;
+    private float mCurrentHealth;
 
     private void Start()
     {
-        currentHealth = turretData.GetHealth;
+        mCurrentHealth = mTurretData.GetHealth;
     }
 
     private void Update()
     {
-        transform.position -= new Vector3(0, (turretData.GetMoveSpeed * Time.deltaTime), 0);
+        transform.position -= new Vector3(0, (mTurretData.GetMoveSpeed * Time.deltaTime), 0);
 
-        if (currentHealth <= 0)
+        if (mCurrentHealth <= 0)
         {
             Actions.KillCount?.Invoke(1);
-            Instantiate(explosion, transform.position, transform.rotation);
+            Instantiate(mExplosion, transform.position, transform.rotation);
             TurretDie();
         }
     }
@@ -29,14 +27,14 @@ public class TurretBase : MonoBehaviour
     private void TurretDie()
     {
         gameObject.SetActive(false);
-        currentHealth = turretData.GetHealth;
+        mCurrentHealth = mTurretData.GetHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 7)
         {
-            currentHealth -= 1;
+            mCurrentHealth -= 1;
             collision.gameObject.SetActive(false);
         }
     }
@@ -44,6 +42,6 @@ public class TurretBase : MonoBehaviour
     private void OnBecameInvisible()
     {
         gameObject.SetActive(false);
-        currentHealth = turretData.GetHealth;
+        mCurrentHealth = mTurretData.GetHealth;
     }
 }

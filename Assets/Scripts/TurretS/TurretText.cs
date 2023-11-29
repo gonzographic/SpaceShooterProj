@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class TurretText : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI killText;
+    [SerializeField] private TextMeshProUGUI mKillText = null;
 
-    private int currentKills;
+    private int mCurrentKills;
 
-    public int GetturretKills => currentKills;
+    public int GetturretKills => mCurrentKills;
 
     private void Start()
     {
-        killText.text = "0";
+        mCurrentKills = 0;
     }
 
     private void OnEnable()
@@ -28,13 +28,13 @@ public class TurretText : MonoBehaviour
     {
         if (amount == 0)
         {
-            currentKills = 0;
-            killText.text = currentKills.ToString();
+            mCurrentKills = 0;
+            mKillText.text = mCurrentKills.ToString();
         }
         else
         {
-            currentKills += amount;
-            killText.text = currentKills.ToString();
+            mCurrentKills += amount;
+            mKillText.text = mCurrentKills.ToString();
         }
     }
 }

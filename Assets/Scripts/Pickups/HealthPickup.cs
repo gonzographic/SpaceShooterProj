@@ -2,41 +2,37 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    [SerializeField] private float speed = 5;
-    [SerializeField] private float distanceToNextWaypoint = 1;
-    [SerializeField] private Transform waypoint;
+    [SerializeField] private float mSpeed = 5.0f;
+    [SerializeField] private float mDistanceToNextWaypoint = 1.0f;
+    [SerializeField] private Transform mWaypointPosition = null;
 
-    private Transform[] wayPoints;
-    private int currentWaypoint;
+    private Transform[] mWaypoints;
+    private int mCurrentWaypoint;
 
     private void Start()
     {
-        var temp = waypoint.GetComponentsInChildren<Transform>();
-        wayPoints = new Transform[temp.Length - 1];
+        var temp = mWaypointPosition.GetComponentsInChildren<Transform>();
+        mWaypoints = new Transform[temp.Length - 1];
 
         for (int i = 2; i < temp.Length; i++)
         {
-            wayPoints[i - 2] = temp[i];
+            mWaypoints[i - 2] = temp[i];
         }
 
-        currentWaypoint = 0;
+        mCurrentWaypoint = 0;
     }
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, wayPoints[currentWaypoint].position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, mWaypoints[mCurrentWaypoint].position, mSpeed * Time.deltaTime);
 
-        /*Vector3 rotation = wayPoints[currentWaypoint].position - transform.position;
-        float axis = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, axis - 90);*/
-
-        if (Vector3.Distance(transform.position, wayPoints[currentWaypoint].position) < distanceToNextWaypoint)
+        if (Vector3.Distance(transform.position, mWaypoints[mCurrentWaypoint].position) < mDistanceToNextWaypoint)
         {
-            currentWaypoint++;
+            mCurrentWaypoint++;
 
-            if (currentWaypoint >= wayPoints.Length)
+            if (mCurrentWaypoint >= mWaypoints.Length)
             {
-                currentWaypoint = 0;
+                mCurrentWaypoint = 0;
             }
         }
     }

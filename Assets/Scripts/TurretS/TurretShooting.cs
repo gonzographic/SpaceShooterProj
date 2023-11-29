@@ -1,53 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class TurretShooting : MonoBehaviour
 {
-    [SerializeField] private TurretSO turretData;
-    [SerializeField] private GameObject laserSpawnOne;
+    [SerializeField] private TurretSO mTurretData = null;
+    [SerializeField] private EnemyLaserPool mLaserPool = null;
+    [SerializeField] private GameObject mLaserSpawnOne = null;
 
-    private GameObject player;
-    private float shootTimer;
+    private GameObject mPlayer;
+    private float mShootTimer;
 
     private void OnEnable()
     {
-        shootTimer = 1.5f;
-        player = GameObject.FindGameObjectWithTag("Player");
+        mPlayer = GameObject.FindGameObjectWithTag("Player");
+        mShootTimer = 1.5f;
     }
 
     private void Update()
     {
-        shootTimer -= Time.deltaTime;
+        mShootTimer -= Time.deltaTime;
         TargetPlayer();
         ShootPlayer();
     }
 
     private void ShootPlayer()
     {
-        if (shootTimer <= 0)
+        if (mShootTimer <= 0)
         {
-            var newLaser = EnemyLaserPool.Instance.GetLaserProjectile();
+            var newLaser = mLaserPool.GetLaserProjectile();
+
             if (newLaser != null)
             {
-                newLaser.transform.position = laserSpawnOne.transform.position;
+                newLaser.transform.position = mLaserSpawnOne.transform.position;
                 newLaser.transform.rotation = transform.rotation;
             }
 
-            for (int i = 0; i < EnemyLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            for (int i = 0; i < mLaserPool.GetLaserProjectiles.Count; i++)
             {
                 newLaser.SetActive(true);
             }
             //soundEffects.PlayOneShot(laserSound.GetFireSound);
-            shootTimer = 1.5f;
+            mShootTimer = 1.5f;
         }
     }
 
     private void TargetPlayer()
     {
-        Vector3 rotation = player.transform.position - transform.position;
-        float zAxisRotation = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        var rotation = mPlayer.transform.position - transform.position;
+        var zAxisRotation = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, zAxisRotation - 90);
     }
 

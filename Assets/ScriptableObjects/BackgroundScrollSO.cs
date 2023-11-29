@@ -1,14 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "BackgroundScrollBase", menuName = "ScriptableObjects/BackgroundScrollBase")]
 public class BackgroundScrollSO : ScriptableObject
 {
-    [SerializeField] private Texture backgroundImage;
-    [SerializeField] private float scrollSpeed;
-    [SerializeField] private Color imageTint;
+    [SerializeField] private Texture mBackgroundImage = null;
+    [SerializeField] private float mScrollSpeed = 0.0f;
+    [SerializeField] private Color mImageTint = Color.white;
 
-    public float GetScrollSpeed => scrollSpeed;
-    public Texture GetBackgroundImage => backgroundImage;
-    public Color GetImageTint => imageTint;
+    public float GetScrollSpeed => mScrollSpeed;
+    public Texture GetBackgroundImage => mBackgroundImage;
+    public Color GetImageTint => mImageTint;
 }

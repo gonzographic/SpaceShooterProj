@@ -2,53 +2,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossLaserPool : MonoBehaviour
-{
-    public static BossLaserPool Instance { get; private set; }
+{ 
+    [SerializeField] private GameObject mLaserProjectile = null;
 
-    [SerializeField] private GameObject laserProjectile;
+    private List<GameObject> mLaserProjectiles;
+    private int mAmountOfLaserProjectiles;
 
-    private List<GameObject> laserProjectiles;
-    public List<GameObject> GetLaserProjectiles => laserProjectiles;
+    public List<GameObject> GetLaserProjectiles => mLaserProjectiles;
 
-    private int amountOfLaserProjectiles;
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
-        laserProjectiles = new List<GameObject>();
+        mLaserProjectiles = new List<GameObject>();
+        mAmountOfLaserProjectiles = 50;
 
-        amountOfLaserProjectiles = 50;
-
-        for (int i = 0; i < amountOfLaserProjectiles; i++)
+        for (int i = 0; i < mAmountOfLaserProjectiles; i++)
         {
-            laserProjectiles.Add(Instantiate(laserProjectile, transform));
-            laserProjectiles[i].SetActive(false);
+            mLaserProjectiles.Add(Instantiate(mLaserProjectile, transform));
+            mLaserProjectiles[i].SetActive(false);
         }
     }
 
     public GameObject GetLaserProjectile()
     {
-        for (int i = 0; i < amountOfLaserProjectiles; i++)
+        for (int i = 0; i < mAmountOfLaserProjectiles; i++)
         {
-            if (!laserProjectiles[i].activeInHierarchy)
+            if (!mLaserProjectiles[i].activeInHierarchy)
             {
-                return laserProjectiles[i];
+                return mLaserProjectiles[i];
             }
         }
 
-        var newLaser = Instantiate(laserProjectile, transform);
-        laserProjectile.gameObject.SetActive(false);
-        laserProjectiles.Add(newLaser);
+        var newLaser = Instantiate(mLaserProjectile, transform);
+        mLaserProjectile.SetActive(false);
+        mLaserProjectiles.Add(newLaser);
 
         return newLaser;
     }

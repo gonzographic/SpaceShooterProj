@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyLaser : MonoBehaviour
 {
-    [SerializeField] private ProjectileSO projectileData;
-    [SerializeField] private Rigidbody2D myRigidbody;
-    private GameObject player;
+    [SerializeField] private ProjectileSO mProjectileData = null;
+    [SerializeField] private Rigidbody2D mRigidbody = null;
+
+    private GameObject mPlayer;
 
     private void OnEnable()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        var direction = player.transform.position - transform.position;
-        myRigidbody.velocity = new Vector2(direction.x, direction.y).normalized * projectileData.GetTravelSpeed;
+        mPlayer = GameObject.FindGameObjectWithTag("Player");
+        var direction = mPlayer.transform.position - transform.position;
+        mRigidbody.velocity = new Vector2(direction.x, direction.y).normalized * mProjectileData.GetSpeed;
     }
 
     private void OnBecameInvisible()

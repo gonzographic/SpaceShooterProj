@@ -1,79 +1,83 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInputs : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D myRigidbody;
-    [SerializeField] private Animator myAnimator;
-    [SerializeField] private GameObject laserAmmo;
-    [SerializeField] private GameObject bulletSpawnMiddle;
-    [SerializeField] private GameObject bulletSpawnLeft;
-    [SerializeField] private GameObject bulletSpawnRight;
-    [SerializeField] private List<GameObject> spawnPoints;
-    [SerializeField] private AudioSource soundEffects;
-    [SerializeField] private AudioSource soundLasers;
-    [SerializeField] private AudioSource soundPower;
-    [SerializeField] private AudioClip wallImpactSound;
-    [SerializeField] private AudioClip powerOff;
-    [SerializeField] private AudioClip warningBeep;
-    [SerializeField] private AudioClip fullHealth;
-    [SerializeField] private ProjectileSO laserSound;
-    [SerializeField] private LaserPool laser;
-    [SerializeField] private TextMeshProUGUI powerShotTime;
-    [SerializeField] private GameObject explosion;
-    [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject playScreen;
-    [SerializeField] private GameObject playScreenUI;
-    [SerializeField] private GameObject managers;
-    [SerializeField] private GameObject player;
+    [Header("Player Information")]
+    [SerializeField] private GameObject mPlayer = null;
+    [SerializeField] private Animator mAnimator = null;
+    [SerializeField] private Rigidbody2D mRigidbody = null;
+    [SerializeField] private GameObject mLaserAmmo = null;
+    [SerializeField] private GameObject mBulletSpawnMiddle = null;
+    [SerializeField] private GameObject mBulletSpawnLeft = null;
+    [SerializeField] private GameObject mBulletSpawnRight = null;
+
+    [Header("Object Refrences")]
+    [SerializeField] private GameObject mExplosion = null;
+    [SerializeField] private GameObject mMainMenu = null;
+    [SerializeField] private GameObject mPlayScreen = null;
+    [SerializeField] private GameObject mPlayScreenUI = null;
+    [SerializeField] private GameObject mManagers = null;
+    [SerializeField] private LaserPool mLaserPool = null;
+    [SerializeField] private ProjectileSO mLaser = null;
+    [SerializeField] private List<GameObject> mSpawnPoints = null;
+    [SerializeField] private TextMeshProUGUI mPowerShotTimeText = null;
+
+    [Header("Sound Effects")]
+    [SerializeField] private AudioSource mSoundEffects = null;
+    [SerializeField] private AudioSource mSoundLasers = null;
+    [SerializeField] private AudioSource mSoundPower = null;
+    [SerializeField] private AudioClip mWallImpactSound = null;
+    [SerializeField] private AudioClip mPowerOffSound = null;
+    [SerializeField] private AudioClip mWarningBeepSound = null;
+    [SerializeField] private AudioClip mFullHealthSound = null;
     //[SerializeField] private AudioSource thisMusic;
 
-    private float currentHealth;
-    private Vector3 myTransform;
-    private float shipXPos;
-    private float shipYPos;
-    private float newXPos;
-    private float newYPos;
-    private float shootTimer;
-    private float powerTimer;
+    private float mCurrentHealth;
+    private float mShipXPos;
+    private float mShipYPos;
+    private float mNewXPos;
+    private float mNewYPos;
+    private float mShootTimer;
+    private float mPowerShotTimer;
 
-    public float GetHealth => currentHealth;
+    public float GetHealth => mCurrentHealth;
 
     void Start()
     {
-        currentHealth = 5;
-        shootTimer = 0.3f;
-        powerTimer = 5;
-        myTransform = transform.position;
+        mCurrentHealth = 5;
+        mShipXPos = 0.0f;
+        mShipYPos = 0.0f;
+        mNewXPos = 0.0f;
+        mNewYPos = 0.0f;   
+        mShootTimer = 0.3f;
+        mPowerShotTimer = 5;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
     }
 
     void Update()
     {
-        shootTimer += Time.deltaTime;
-        powerTimer -= Time.deltaTime;
+        mShootTimer += Time.deltaTime;
+        mPowerShotTimer -= Time.deltaTime;
 
-        if (Mathf.Floor(powerTimer) <= 0)
+        if (Mathf.Floor(mPowerShotTimer) <= 0)
         {
-            powerTimer = 0;
+            mPowerShotTimer = 0;
         }
 
-
-        if (powerTimer == 0)
+        if (mPowerShotTimer == 0)
         {
-            powerShotTime.text = "RDY";
+            mPowerShotTimeText.text = "RDY";
         }
         else
         {
-            powerShotTime.text = Mathf.Floor(powerTimer).ToString();
+            mPowerShotTimeText.text = Mathf.Floor(mPowerShotTimer).ToString();
         }
 
-        shipXPos = Input.mousePosition.x;
-        shipYPos = Input.mousePosition.y;
+        mShipXPos = Input.mousePosition.x;
+        mShipYPos = Input.mousePosition.y;
 
         ChangeAnimations();
 
@@ -81,95 +85,98 @@ public class PlayerInputs : MonoBehaviour
 
         ChangeWeapons();
 
-        if (Input.GetMouseButton(0) && shootTimer >= 0.3f)
+        if (Input.GetMouseButton(0) && mShootTimer >= 0.3f)
         {
-            var newLaser = laser.GetLaserProjectile();
+            var newLaser = mLaserPool.GetLaserProjectile();
+
             if (newLaser != null)
             {
-                newLaser.transform.position = bulletSpawnMiddle.transform.position;
+                newLaser.transform.position = mBulletSpawnMiddle.transform.position;
             }
 
-            for (int i = 0; i < laser.GetLaserProjectiles.Count; i++)
+            for (int i = 0; i < mLaserPool.GetLaserProjectiles.Count; i++)
             {
                 newLaser.SetActive(true);
             }
-            soundLasers.PlayOneShot(laserSound.GetFireSound);
-            shootTimer = 0;
-        }
-        if (Input.GetMouseButtonDown(1) && powerTimer <= 0)
-        {
-            GameObject[] newLaser = new GameObject[3];
 
-            for (int i = 0; i < spawnPoints.Count; i++)
+            mSoundLasers.PlayOneShot(mLaser.GetFireSound);
+            mShootTimer = 0;
+        }
+        if (Input.GetMouseButtonDown(1) && mPowerShotTimer <= 0)
+        {
+            var newLaser = new GameObject[3];
+
+            for (int i = 0; i < mSpawnPoints.Count; i++)
             {
-                newLaser[i] = laser.GetLaserProjectile();
+                newLaser[i] = mLaserPool.GetLaserProjectile();
 
                 if (newLaser[i] != null)
                 {
-                    newLaser[i].transform.position = spawnPoints[i].transform.position;
+                    newLaser[i].transform.position = mSpawnPoints[i].transform.position;
                 }
 
-                for (int j = 0; j < laser.GetLaserProjectiles.Count; j++)
+                for (int j = 0; j < mLaserPool.GetLaserProjectiles.Count; j++)
                 {
                     newLaser[i].SetActive(true);
                 }
             }
-            soundLasers.PlayOneShot(laserSound.GetFireSound);
-            powerTimer = 5;
+
+            mSoundLasers.PlayOneShot(mLaser.GetFireSound);
+            mPowerShotTimer = 5;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //thisMusic.Stop();
-            mainMenu.SetActive(true);
-            managers.SetActive(false);
-            playScreen.SetActive(false);
-            playScreenUI.SetActive(false);
-            player.SetActive(false);
+            mMainMenu.SetActive(true);
+            mManagers.SetActive(false);
+            mPlayScreen.SetActive(false);
+            mPlayScreenUI.SetActive(false);
+            mPlayer.SetActive(false);
         }
 
-        myRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(newXPos, newYPos, -Camera.main.transform.position.z));
+        mRigidbody.position = Camera.main.ScreenToWorldPoint(new Vector3(mNewXPos, mNewYPos, -Camera.main.transform.position.z));
 
-        if (currentHealth <= 0)
+        if (mCurrentHealth <= 0)
         {
-            if (!soundPower.isPlaying)
+            if (!mSoundPower.isPlaying)
             {
-                soundPower.PlayOneShot(powerOff);
+                mSoundPower.PlayOneShot(mPowerOffSound);
             }
 
-            Instantiate(explosion, transform.position, transform.rotation);
+            Instantiate(mExplosion, transform.position, transform.rotation);
             Actions.KillCount?.Invoke(0);
       
-            currentHealth = 5;
+            mCurrentHealth = 5;
             Debug.Log("Game Over");
         }
     }
 
     private void KeepPlayerInBounds()
     {
-        if (shipXPos <= (Screen.width - Screen.width) + 50)
+        if (mShipXPos <= (Screen.width - Screen.width) + 50)
         {
-            newXPos = 50;
+            mNewXPos = 50;
         }
-        else if (shipXPos >= (Screen.width - 50))
+        else if (mShipXPos >= (Screen.width - 50))
         {
-            newXPos = Screen.width - 50;
-        }
-        else
-        {
-            newXPos = Input.mousePosition.x;
-        }
-        if (shipYPos <= (Screen.height - Screen.height) + 120)
-        {
-            newYPos = 120;
-        }
-        else if (shipYPos >= (Screen.height - 400))
-        {
-            newYPos = Screen.height - 400;
+            mNewXPos = Screen.width - 50;
         }
         else
         {
-            newYPos = Input.mousePosition.y;
+            mNewXPos = Input.mousePosition.x;
+        }
+        if (mShipYPos <= (Screen.height - Screen.height) + 120)
+        {
+            mNewYPos = 120;
+        }
+        else if (mShipYPos >= (Screen.height - 400))
+        {
+            mNewYPos = Screen.height - 400;
+        }
+        else
+        {
+            mNewYPos = Input.mousePosition.y;
         }
     }
 
@@ -177,21 +184,21 @@ public class PlayerInputs : MonoBehaviour
     {
         if (Input.GetAxis("Mouse X") <= -0.1)
         {
-            myAnimator.SetLayerWeight(1, 1);
-            myAnimator.SetLayerWeight(2, 0);
+            mAnimator.SetLayerWeight(1, 1);
+            mAnimator.SetLayerWeight(2, 0);
         }
 
         if (Input.GetAxis("Mouse X") >= 0.1)
         {
-            myAnimator.SetLayerWeight(1, 0);
-            myAnimator.SetLayerWeight(2, 1);
+            mAnimator.SetLayerWeight(1, 0);
+            mAnimator.SetLayerWeight(2, 1);
         }
 
         if (Input.GetAxis("Mouse X") == 0)
         {
-            myAnimator.SetLayerWeight(0, 1);
-            myAnimator.SetLayerWeight(1, 0);
-            myAnimator.SetLayerWeight(2, 0);
+            mAnimator.SetLayerWeight(0, 1);
+            mAnimator.SetLayerWeight(1, 0);
+            mAnimator.SetLayerWeight(2, 0);
         }
     }
 
@@ -199,7 +206,7 @@ public class PlayerInputs : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            
+            // Not implemented yet
         }
     }
 
@@ -207,14 +214,14 @@ public class PlayerInputs : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            currentHealth -= 1;
+            mCurrentHealth -= 1;
             collision.gameObject.SetActive(false);
         }
 
         if (collision.gameObject.layer == 9)
         {
-            currentHealth = 5;
-            soundPower.PlayOneShot(fullHealth);
+            mCurrentHealth = 5;
+            mSoundPower.PlayOneShot(mFullHealthSound);
             collision.gameObject.SetActive(false);
         }
     }
@@ -222,40 +229,40 @@ public class PlayerInputs : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "LeftWall")
+        if (collision.gameObject.CompareTag("LeftWall"))
         {
-            if (!soundEffects.isPlaying)
+            if (!mSoundEffects.isPlaying)
             {
-                soundEffects.PlayOneShot(wallImpactSound);
+                mSoundEffects.PlayOneShot(mWallImpactSound);
             }
         }
 
-        if (collision.gameObject.tag == "RightWall")
+        if (collision.gameObject.CompareTag("RightWall"))
         {
-            if (!soundEffects.isPlaying)
+            if (!mSoundEffects.isPlaying)
             {
-                soundEffects.PlayOneShot(wallImpactSound);
+                mSoundEffects.PlayOneShot(mWallImpactSound);
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "LeftWall")
+        if (collision.gameObject.CompareTag("LeftWall"))
         {
-            currentHealth -= 1;
+            mCurrentHealth -= 1;
 
-                soundEffects.PlayOneShot(warningBeep);
-                soundEffects.PlayOneShot(wallImpactSound);
+                mSoundEffects.PlayOneShot(mWarningBeepSound);
+                mSoundEffects.PlayOneShot(mWallImpactSound);
 
         }
 
-        if (collision.gameObject.tag == "RightWall")
+        if (collision.gameObject.CompareTag("RightWall"))
         {
-            currentHealth -= 1;
+            mCurrentHealth -= 1;
 
-                soundEffects.PlayOneShot(warningBeep);
-                soundEffects.PlayOneShot(wallImpactSound);
+                mSoundEffects.PlayOneShot(mWarningBeepSound);
+                mSoundEffects.PlayOneShot(mWallImpactSound);
 
         }
     }

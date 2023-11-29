@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class SharkBoss : MonoBehaviour
 {
-    [SerializeField] private TurretSO turretData;
-    [SerializeField] private GameObject[] laserSpawns;
+    [SerializeField] private TurretSO mTurretData = null;
+    [SerializeField] private BossLaserPool mBossLaserPool = null;
+    [SerializeField] private GameObject[] mLaserSpawns = null;
 
-    private GameObject player;
-    private float shootTimer;
-    private float currentHealth;
+    private GameObject mPlayer;
+    private float mShootTimer;
+    private float mCurrentHealth;
+
+    private void Awake()
+    {
+        mPlayer = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void Start()
     {
-        currentHealth = turretData.GetHealth;
-    }
-
-    private void OnEnable()
-    {
-        shootTimer = 1;
-        player = GameObject.FindGameObjectWithTag("Player");
+        mCurrentHealth = mTurretData.GetHealth;
+        mShootTimer = 1;
     }
 
     private void Update()
     {
-        shootTimer -= Time.deltaTime;
+        mShootTimer -= Time.deltaTime;
         TargetPlayer();
         ShootPlayer();
 
-        if (currentHealth <= 0)
+        if (mCurrentHealth <= 0)
         {
             TurretDie();
         }
@@ -37,47 +38,47 @@ public class SharkBoss : MonoBehaviour
     private void TurretDie()
     {
         gameObject.SetActive(false);
-        currentHealth = turretData.GetHealth;
+        mCurrentHealth = mTurretData.GetHealth;
     }
 
     private void ShootPlayer()
     {
-        if (shootTimer <= 0)
+        if (mShootTimer <= 0)
         {
-            var newLaser = BossLaserPool.Instance.GetLaserProjectile();
+            var newLaser = mBossLaserPool.GetLaserProjectile();
 
             if (newLaser != null)
             {
-                newLaser.transform.position = laserSpawns[0].transform.position;
+                newLaser.transform.position = mLaserSpawns[0].transform.position;
                 newLaser.transform.rotation = transform.rotation;
             }
 
-            for (int i = 0; i < BossLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            for (int i = 0; i < mBossLaserPool.GetLaserProjectiles.Count; i++)
             {
                 newLaser.SetActive(true);
             }
 
 
-            var newLaserTwo = BossLaserPool.Instance.GetLaserProjectile();
+            var newLaserTwo = mBossLaserPool.GetLaserProjectile();
             if (newLaserTwo != null)
             {
-                newLaserTwo.transform.position = laserSpawns[1].transform.position;
+                newLaserTwo.transform.position = mLaserSpawns[1].transform.position;
                 newLaserTwo.transform.rotation = transform.rotation;
             }
 
-            for (int i = 0; i < BossLaserPool.Instance.GetLaserProjectiles.Count; i++)
+            for (int i = 0; i < mBossLaserPool.GetLaserProjectiles.Count; i++)
             {
                 newLaserTwo.SetActive(true);
             }
-            //soundEffects.PlayOneShot(laserSound.GetFireSound);
-            shootTimer = 1;
+
+            mShootTimer = 1;
         }
     }
 
     private void TargetPlayer()
     {
-        Vector3 rotation = player.transform.position - transform.position;
-        float zAxisRotation = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        var rotation = mPlayer.transform.position - transform.position;
+        var zAxisRotation = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, zAxisRotation + 90);
     }
 
@@ -85,7 +86,7 @@ public class SharkBoss : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            currentHealth -= 1;
+            mCurrentHealth -= 1;
             collision.gameObject.SetActive(false);
         }
     }
